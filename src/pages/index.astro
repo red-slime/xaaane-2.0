@@ -1,0 +1,481 @@
+---
+import dickinsonWireframe from "../assets/dickinson-wireframe.png";
+import dickinsonColor from "../assets/dickinson.jpg";
+import academyWireframe from "../assets/academy-wireframe.png";
+import academyColor from "../assets/academy.jpg";
+import columbiaWireframe from "../assets/visit-columbia-county-wireframe.png";
+import columbiaColor from "../assets/visit-columbia-county-color.jpg";
+import sageWireframe from "../assets/sage-valley-wireframe.png";
+import sageColor from "../assets/sage-valley-color.jpg";
+import fieldWireframe from "../assets/field-botanicals-wireframe.png";
+import fieldColor from "../assets/field-botanicals-color.jpg";
+import seaWireframe from "../assets/sea-island-wireframe.png";
+import seaColor from "../assets/sea-island-color.jpg";
+import georgiaWireframe from "../assets/georgia-lake-country-wireframe.png";
+import georgiaColor from "../assets/georgia-lake-country.jpg";
+import dataWireframe from "../assets/data-wireframe.png";
+import dataColor from "../assets/data.jpg";
+import monikerWireframe from "../assets/moniker-wireframe.png";
+import monikerColor from "../assets/moniker.jpg";
+import kendrickWireframe from "../assets/kendrick-body-shop-wireframe.png";
+import kendrickColor from "../assets/kendrick-body-shop-color.jpg";
+import griptape from "../assets/griptape.gif";
+import xaaane from "../assets/xaaane.png";
+import searching from "../assets/searching.gif";
+import later from "../assets/later.gif";
+import shutdown from "../assets/shutdown.gif";
+import warping from "../assets/warping.gif";
+import handy from "../assets/handy.gif";
+import "./index.css";
+---
+
+<html lang="en">
+	<head>
+		<link rel="icon" type="image/png" href="/flavicon.png" />
+		<title>XAAANE @ 10x DEV</title>
+		<meta name="description" content="my portfolio site" />
+		<meta
+			name="keywords"
+			content="xane, xaaane, zain, mcintire, website, web, jamstack, full-stack, seo, hosting,full, stack, developer, designer, augusta, ga"
+		/>
+		<meta property="og:title" content="XAAANE @ 10x DEV" />
+		<meta property="og:description" content="my portfolio site" />
+		<meta property="og:image" content="/xaaane.png" />
+		<meta property="og:url" content="https://xaaane.com/" />
+
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+		/>
+	</head>
+	<body style={`background-image: url(${griptape});`}>
+		<div id="circle"></div>
+		<div class="container">
+			<div class="header">
+				<div id="name" class="scaled">
+					<div id="ico"></div>
+					<div class="text">
+						<h1>XAAANE</h1>
+						<p>full-stack web developer</p>
+						<a href="mailto:web@xaaane.com">web@xaaane.com</a>
+					</div>
+				</div>
+				<div id="profile" class="scaled">
+					<div class="cube">
+						<div class="face front" style={`background-image: url(${xaaane});`}>
+						</div>
+						<div
+							class="face back"
+							style={`background-image: url(${searching});`}
+						>
+						</div>
+						<div class="face right" style={`background-image: url(${later});`}>
+						</div>
+						<div
+							class="face left"
+							style={`background-image: url(${shutdown});`}
+						>
+						</div>
+						<div class="face top" style={`background-image: url(${warping});`}>
+						</div>
+						<div class="face bottom" style={`background-image: url(${handy});`}>
+						</div>
+					</div>
+					<marquee scrollamount="3px" behavior="alternate">
+						<p>
+							bug boy | leftover spaghetti | ぜいん | creating | #bfff00 |
+							red-slime | 3D | dragonfly | grip tape | blue shift | loving
+						</p>
+					</marquee>
+					<div class="marquee">
+						<p>
+							bug boy | leftover spaghetti | ぜいん | creating | #bfff00 |
+							red-slime | 3D | dragonfly | grip tape | blue shift | loving
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="work">
+				<a
+					href="https://dickinsonarchitects.com/"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<div class="work-item">
+						<img
+							class="wireframe-site"
+							src={dickinsonWireframe}
+							alt="dickinson website wireframe"
+						/>
+						<img
+							class="color-site"
+							src={dickinsonColor}
+							alt="dickinson website color"
+						/>
+						<p>Dickinson Architects</p>
+					</div>
+				</a>
+				<a
+					href="https://academyartmuseum.org/"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<div class="work-item">
+						<img
+							class="wireframe-site"
+							src={academyWireframe}
+							alt="academy art website wireframe"
+						/>
+						<img
+							class="color-site"
+							src={academyColor}
+							alt="academy art website color"
+						/>
+						<p>Academy Art</p>
+					</div>
+				</a>
+				<a
+					href="https://visitcolumbiacountyga.com/"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<div class="work-item">
+						<img
+							class="wireframe-site"
+							src={columbiaWireframe}
+							alt="visit columbia county website wireframe"
+						/>
+						<img
+							class="color-site"
+							src={columbiaColor}
+							alt="visit columbia county website color"
+						/>
+						<p>Columbia County</p>
+					</div>
+				</a>
+				<a href="https://sagevalleygolf.com/" target="_blank" rel="noreferrer">
+					<div class="work-item">
+						<img
+							class="wireframe-site"
+							src={sageWireframe}
+							alt="sage valley website wireframe"
+						/>
+						<img
+							class="color-site"
+							src={sageColor}
+							alt="sage valley website color"
+						/>
+						<p>Sage Valley</p>
+					</div>
+				</a>
+				<a href="https://fieldbotanicals.com/" target="_blank" rel="noreferrer">
+					<div class="work-item">
+						<img
+							class="wireframe-site"
+							src={fieldWireframe}
+							alt="field botanicals website wireframe"
+						/>
+						<img
+							class="color-site"
+							src={fieldColor}
+							alt="field botanicals website color"
+						/>
+						<p>Field Botanicals</p>
+					</div>
+				</a>
+				<a
+					href="https://seaislandservices.com/"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<div class="work-item">
+						<img
+							class="wireframe-site"
+							src={seaWireframe}
+							alt="sea island website wireframe"
+						/>
+						<img
+							class="color-site"
+							src={seaColor}
+							alt="sea island website color"
+						/>
+						<p>Sea Island</p>
+					</div>
+				</a>
+				<a href="https://galakecountry.com/" target="_blank" rel="noreferrer">
+					<div class="work-item">
+						<img
+							class="wireframe-site"
+							src={georgiaWireframe}
+							alt="goergia lake country website wireframe"
+						/>
+						<img
+							class="color-site"
+							src={georgiaColor}
+							alt="georgia lake country website color"
+						/>
+						<p>Lake Country</p>
+					</div>
+				</a>
+				<a
+					href="https://www.augustadatastorage.com/"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<div class="work-item">
+						<img
+							class="wireframe-site"
+							src={dataWireframe}
+							alt="augusta data storage website wireframe"
+						/>
+						<img
+							class="color-site"
+							src={dataColor}
+							alt="augusta data storage color"
+						/>
+						<p>Data Storage</p>
+					</div>
+				</a>
+				<a href="https://meetmoniker.com/" target="_blank" rel="noreferrer">
+					<div class="work-item">
+						<img
+							class="wireframe-site"
+							src={monikerWireframe}
+							alt="moniker website wireframe"
+						/>
+						<img
+							class="color-site"
+							src={monikerColor}
+							alt="moniker website color"
+						/>
+						<p>Moniker</p>
+					</div>
+				</a>
+				<a
+					href="https://kendrickbodyshop.com/"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<div class="work-item">
+						<img
+							class="wireframe-site"
+							src={kendrickWireframe}
+							alt="kendrick body shop website wireframe"
+						/>
+						<img
+							class="color-site"
+							src={kendrickColor}
+							alt="kendrick body shop website color"
+						/>
+						<p>Kendrick</p>
+					</div>
+				</a>
+			</div>
+			<a class="work-with-me" href="mailto:web@xaaane.com">get a site</a>
+		</div>
+		<script>
+			// Check for Safari, the new IE
+
+			window.onload = function () {
+				function isSafari() {
+					return (
+						/Safari/.test(navigator.userAgent) &&
+						!(
+							/Chrome/.test(navigator.userAgent) ||
+							/Chromium/.test(navigator.userAgent)
+						)
+					);
+				}
+
+				if (isSafari()) {
+					let marqueeTag = document.querySelector("#profile marquee");
+					let marqueeDiv = document.querySelector("#profile .marquee");
+
+					marqueeTag.style.display = "none";
+					marqueeDiv.style.display = "block";
+				}
+			};
+		</script>
+		<script>
+			// Cursor
+			const myCircle = document.getElementById("circle");
+			const ico = document.getElementById("ico");
+			const cursorSize = myCircle.offsetWidth;
+
+			// get the dimensions and position of the ico element
+			const rect = ico.getBoundingClientRect();
+
+			// calculate the center of the ico element
+			let mousePos = {
+				x: rect.left + (rect.width - cursorSize) / 2,
+				y: rect.top + (rect.height - cursorSize) / 2,
+			};
+
+			const myMouse = {
+				follow: function (event) {
+					const width = document.documentElement.clientWidth - cursorSize;
+					const height = document.documentElement.scrollHeight - cursorSize;
+
+					let x = event.pageX - cursorSize / 2;
+					let y = event.pageY - cursorSize / 2;
+
+					x = x < 0 ? 0 : x > width ? width : x;
+					y = y < 0 ? 0 : y > height ? height : y;
+
+					mousePos.x = x;
+					mousePos.y = y;
+				},
+			};
+
+			function updateCirclePosition() {
+				myCircle.style.left = mousePos.x + "px";
+				myCircle.style.top = mousePos.y + "px";
+
+				requestAnimationFrame(updateCirclePosition);
+			}
+
+			document.onmousemove = myMouse.follow;
+			updateCirclePosition();
+
+			// Get all <div> elements with the class "scaled"
+			const scaledDivs = document.getElementsByClassName("scaled");
+			for (let div of scaledDivs) {
+				// Scale myCircle to 200% when mouse is over <div> tag with the class "scaled"
+				div.addEventListener("mouseover", function () {
+					myCircle.style.transform = "scale(2)";
+				});
+
+				// Remove transform when mouse leaves the <div> tag
+				div.addEventListener("mouseout", function () {
+					myCircle.style.transform = "scale(1)";
+				});
+			}
+
+			// Get all <a> elements within the parent class of 'work'
+			const workLinks = document.querySelectorAll(".work a");
+			for (let link of workLinks) {
+				// Scale myCircle to 200% when mouse is over <a> tag within the parent class of 'work'
+				link.addEventListener("mouseover", function () {
+					myCircle.style.transform = "scale(2)";
+				});
+
+				// Remove transform when mouse leaves the <a> tag
+				link.addEventListener("mouseout", function () {
+					myCircle.style.transform = "scale(1)";
+				});
+			}
+
+			// CSS Styles for mobile
+			function isElementCentered(el) {
+				var rect = el.getBoundingClientRect();
+				var viewHeight = Math.max(
+					document.documentElement.clientHeight,
+					window.innerHeight
+				);
+				var quarterHeight = viewHeight / 4;
+				return rect.top > quarterHeight && rect.bottom < quarterHeight * 3;
+			}
+
+			function adjustStyles() {
+				let workItems = document.querySelectorAll(
+					".container .work a .work-item"
+				);
+				let wireframeSiteItems = document.querySelectorAll(
+					".container .work a .work-item > .wireframe-site"
+				);
+				let colorSiteItems = document.querySelectorAll(
+					".container .work a .work-item > .color-site"
+				);
+
+				if (window.innerWidth <= 459) {
+					for (let i = 0; i < workItems.length; i++) {
+						if (isElementCentered(workItems[i])) {
+							wireframeSiteItems[i].style.opacity = 0;
+							colorSiteItems[i].style.opacity = 1;
+							colorSiteItems[i].style.filter = "none";
+						} else {
+							wireframeSiteItems[i].style.opacity = "";
+							colorSiteItems[i].style.opacity = "";
+							colorSiteItems[i].style.filter = "";
+						}
+					}
+				} else {
+					for (let i = 0; i < workItems.length; i++) {
+						wireframeSiteItems[i].style.opacity = "";
+						colorSiteItems[i].style.opacity = "";
+						colorSiteItems[i].style.filter = "";
+					}
+				}
+			}
+
+			window.addEventListener("resize", adjustStyles);
+			window.addEventListener("scroll", adjustStyles);
+			window.addEventListener("DOMContentLoaded", adjustStyles);
+		</script>
+
+		<script src="https://threejs.org/build/three.js" is:inline></script>
+
+		<script>
+			// Icosahedron
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera(75, 160 / 160, 0.1, 1000);
+			camera.position.z = 1.7;
+
+			var renderer = new THREE.WebGLRenderer({ alpha: true });
+			var container = document.getElementById("ico");
+			renderer.setSize(160, 160);
+			renderer.domElement.style.position = "absolute";
+			renderer.domElement.style.top = "0";
+			renderer.domElement.style.left = "0";
+			container.appendChild(renderer.domElement);
+
+			var icosahedronGeometry = new THREE.IcosahedronGeometry(1);
+			var wireframeMaterial = new THREE.MeshBasicMaterial({
+				color: 0xffffff,
+				wireframe: true,
+			});
+			var icosahedron = new THREE.Mesh(icosahedronGeometry, wireframeMaterial);
+			scene.add(icosahedron);
+
+			// Convert degrees to radians because Three.js uses radians for rotation
+			// var degreesToRadians = (degrees) => (degrees * Math.PI) / 180;
+
+			// Set initial rotation
+			// icosahedron.rotation.x = degreesToRadians(149);
+			// icosahedron.rotation.y = degreesToRadians(0);
+
+			var mouse = new THREE.Vector2();
+			var target = new THREE.Vector2();
+			var windowHalf = new THREE.Vector2(
+				window.innerWidth / 2,
+				window.innerHeight / 2
+			);
+
+			function onMouseOrTouchMove(event) {
+				if (event.type == "touchmove") {
+					mouse.x = event.touches[0].clientX - windowHalf.x;
+					mouse.y = event.touches[0].clientY - windowHalf.y;
+				} else {
+					mouse.x = event.clientX - windowHalf.x;
+					mouse.y = event.clientY - windowHalf.y;
+				}
+			}
+
+			window.addEventListener("mousemove", onMouseOrTouchMove, false);
+			window.addEventListener("touchmove", onMouseOrTouchMove, false);
+
+			function animate() {
+				requestAnimationFrame(animate);
+				target.x = (1 - mouse.x) * 0.003;
+				target.y = (1 - mouse.y) * 0.003;
+
+				icosahedron.rotation.x += 0.05 * (target.y - icosahedron.rotation.x);
+				icosahedron.rotation.y += 0.05 * (target.x - icosahedron.rotation.y);
+
+				renderer.render(scene, camera);
+			}
+
+			animate();
+		</script>
+	</body>
+</html>
