@@ -47,6 +47,14 @@ import "./index.css";
 			name="viewport"
 			content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
 		/>
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+					"three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+				}
+			}
+		</script>
 	</head>
 	<body style={`background-image: url(${griptape});`}>
 		<div id="circle"></div>
@@ -413,9 +421,8 @@ import "./index.css";
 			window.addEventListener("DOMContentLoaded", adjustStyles);
 		</script>
 
-		<script src="https://threejs.org/build/three.js" is:inline></script>
-
 		<script>
+			import * as THREE from "three";
 			// Icosahedron
 			var scene = new THREE.Scene();
 			var camera = new THREE.PerspectiveCamera(75, 160 / 160, 0.1, 1000);
