@@ -97,10 +97,6 @@ a {
 	}
 }
 
-/* .container .header #name:hover > * {
-	letter-spacing: 2px;
-} */
-
 .container .header #name h1,
 .container .header #name p,
 .container .header #name a {
@@ -129,17 +125,12 @@ a {
 	border-image-slice: 1;
 }
 
-/* .container .header #profile:hover > .cube {
-	transform: rotateX(360deg) rotateY(360deg);
-} */
-
 .container .header #profile marquee {
 	position: absolute;
 	width: 180px;
 	max-width: 180px;
 	color: white;
 	left: 14px;
-	/* bottom: -11px; */
 	transform: translateY(197px);
 }
 
@@ -157,17 +148,7 @@ a {
 .marquee p {
 	display: inline-block;
 	padding-left: 100%;
-	animation: marquee 60s linear infinite;
 	color: white;
-}
-
-@keyframes marquee {
-	0% {
-		transform: translate(0, 0);
-	}
-	100% {
-		transform: translate(-100%, 0);
-	}
 }
 
 .cube {
@@ -177,9 +158,7 @@ a {
 	width: 100%;
 	height: 100%;
 	transform-style: preserve-3d;
-	/* transition: transform 2s ease-in-out; */
-	/*animation: rotateCube 18s steps(6) infinite; 6 sides × 3s = 18s total */
-	animation: rotateCube 60s ease-in-out infinite; /* 6 faces × 4s (3s pause + 1s rotate) */
+	animation: rotateCube 60s ease-in-out infinite;
 }
 
 @keyframes rotateCube {
