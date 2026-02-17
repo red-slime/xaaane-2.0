@@ -27,6 +27,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	overflow-x: hidden;
 }
 
 a {
@@ -59,7 +60,7 @@ a {
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
-	max-width: 1200px;
+	max-width: 1000px;
 	padding: 20px;
 }
 
@@ -109,6 +110,7 @@ a {
 .container .header #name a {
 	color: white;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .container .header #profile {
@@ -127,9 +129,9 @@ a {
 	border-image-slice: 1;
 }
 
-.container .header #profile:hover > .cube {
+/* .container .header #profile:hover > .cube {
 	transform: rotateX(360deg) rotateY(360deg);
-}
+} */
 
 .container .header #profile marquee {
 	position: absolute;
@@ -155,7 +157,7 @@ a {
 .marquee p {
 	display: inline-block;
 	padding-left: 100%;
-	animation: marquee 40s linear infinite;
+	animation: marquee 60s linear infinite;
 	color: white;
 }
 
@@ -175,7 +177,72 @@ a {
 	width: 100%;
 	height: 100%;
 	transform-style: preserve-3d;
-	transition: transform 2s ease-in-out;
+	/* transition: transform 2s ease-in-out; */
+	/*animation: rotateCube 18s steps(6) infinite; 6 sides × 3s = 18s total */
+	animation: rotateCube 60s ease-in-out infinite; /* 6 faces × 4s (3s pause + 1s rotate) */
+}
+
+@keyframes rotateCube {
+	/* Face 1 - pause */
+	0%,
+	12.5% {
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+
+	/* Rotate to Face 3 */
+	16.67% {
+		transform: rotateX(-90deg) rotateY(0deg);
+	}
+	/* Face 3 - pause */
+	16.67%,
+	29.17% {
+		transform: rotateX(-90deg) rotateY(0deg);
+	}
+
+	/* Rotate to Face 5 */
+	33.33% {
+		transform: rotateX(-90deg) rotateY(0deg) rotateZ(-90deg);
+	}
+	/* Face 5 - pause */
+	33.33%,
+	45.83% {
+		transform: rotateX(-90deg) rotateY(0deg) rotateZ(-90deg);
+	}
+
+	/* Rotate to Face 6 */
+	50% {
+		transform: rotateX(-180deg) rotateY(0deg) rotateZ(-90deg);
+	}
+	/* Face 6 - pause */
+	50%,
+	62.5% {
+		transform: rotateX(-180deg) rotateY(0deg) rotateZ(-90deg);
+	}
+
+	/* Rotate to Face 4 */
+	66.67% {
+		transform: rotateX(-180deg) rotateY(90deg) rotateZ(-90deg);
+	}
+	/* Face 4 - pause */
+	66.67%,
+	79.17% {
+		transform: rotateX(-180deg) rotateY(90deg) rotateZ(-90deg);
+	}
+
+	/* Rotate to Face 2 */
+	83.33% {
+		transform: rotateX(-180deg) rotateY(90deg) rotateZ(-180deg);
+	}
+	/* Face 2 - pause */
+	83.33%,
+	95.83% {
+		transform: rotateX(-180deg) rotateY(90deg) rotateZ(-180deg);
+	}
+
+	/* Back to Face 1 */
+	100% {
+		transform: rotateX(-180deg) rotateY(180deg) rotateZ(-180deg);
+	}
 }
 
 .cube .face {
@@ -192,29 +259,58 @@ a {
 	transform: translateZ(94px);
 }
 .back {
-	transform: rotateY(180deg) translateZ(94px);
+	transform: rotateZ(-90deg) rotateY(180deg) translateZ(94px);
 }
 .left {
 	transform: rotateY(-90deg) translateZ(94px);
 }
 .right {
-	transform: rotateY(90deg) translateZ(94px);
+	transform: rotateX(90deg) rotateY(90deg) translateZ(94px);
 }
 .top {
 	transform: rotateX(90deg) translateZ(94px);
 }
 .bottom {
-	transform: rotateX(-90deg) translateZ(94px);
+	transform: rotateX(-90deg) rotateZ(-90deg) translateZ(94px);
 }
 
 .container .work {
 	margin: 100px 0 80px 0;
 	display: grid;
-	grid-template-columns: repeat(5, minmax(200px, 1fr));
-	grid-auto-flow: row;
-	gap: 60px 40px;
+	grid-template-columns: 2fr 2fr;
+	grid-auto-flow: column;
+	gap: 60px 10%;
 }
 
+@media only screen and (max-width: 768px) {
+	.container .work {
+		grid-template-columns: 1fr;
+		grid-auto-flow: row;
+	}
+
+	.work .about,
+	.work .clients {
+		margin: 0 auto;
+		max-width: 400px;
+	}
+
+	#text {
+		left: 75px;
+	}
+}
+
+@media only screen and (max-width: 431px) {
+	.container .work {
+		margin-top: 40px;
+	}
+}
+
+.work .about,
+.work .clients {
+	color: #fff;
+}
+
+/* .hide {
 @media only screen and (max-width: 1200px) {
 	.container .work {
 		grid-template-columns: repeat(4, minmax(200px, 1fr));
@@ -295,6 +391,55 @@ a {
 	opacity: 1;
 	filter: none;
 }
+} */
+
+.clients a {
+	position: relative;
+	display: inline-block;
+	z-index: 2;
+	color: white;
+	padding: 0;
+	cursor: pointer;
+	text-align: center;
+	font-size: 16px;
+	line-height: 2;
+	&:hover {
+		animation: typeshift 0.8s steps(1) infinite;
+	}
+}
+
+.clients p {
+	display: inline-block;
+}
+
+@media only screen and (max-width: 370px) {
+	#text2-con p {
+		display: none;
+	}
+}
+
+@keyframes typeshift {
+	0% {
+		font-style: normal;
+		font-weight: normal;
+	}
+	25% {
+		font-style: italic;
+		font-weight: normal;
+	}
+	50% {
+		font-style: normal;
+		font-weight: bold;
+	}
+	75% {
+		font-style: italic;
+		font-weight: bold;
+	}
+	100% {
+		font-style: normal;
+		font-weight: normal;
+	}
+}
 
 .work-with-me {
 	position: relative;
@@ -307,7 +452,7 @@ a {
 	color: white;
 }
 
-@media only screen and (max-width: 459px) {
+@media only screen and (max-width: 768px) {
 	.work-with-me {
 		display: block;
 	}

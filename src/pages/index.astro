@@ -1,24 +1,4 @@
 ---
-import dickinsonWireframe from "../assets/dickinson-wireframe.png";
-import dickinsonColor from "../assets/dickinson.jpg";
-import academyWireframe from "../assets/academy-wireframe.png";
-import academyColor from "../assets/academy.jpg";
-import tbtbWireframe from "../assets/tbtb-wireframe.png";
-import tbtbColor from "../assets/tbtb-color.jpg";
-import sageWireframe from "../assets/sage-valley-wireframe.png";
-import sageColor from "../assets/sage-valley-color.jpg";
-import fieldWireframe from "../assets/field-botanicals-wireframe.png";
-import fieldColor from "../assets/field-botanicals-color.jpg";
-import seaWireframe from "../assets/sea-island-wireframe.png";
-import seaColor from "../assets/sea-island-color.jpg";
-import georgiaWireframe from "../assets/georgia-lake-country-wireframe.png";
-import georgiaColor from "../assets/georgia-lake-country.jpg";
-import dataWireframe from "../assets/data-wireframe.png";
-import dataColor from "../assets/data.jpg";
-import monikerWireframe from "../assets/moniker-wireframe.png";
-import monikerColor from "../assets/moniker.jpg";
-import kendrickWireframe from "../assets/kendrick-body-shop-wireframe.png";
-import kendrickColor from "../assets/kendrick-body-shop-color.jpg";
 import griptape from "../assets/griptape.gif";
 import xaaane from "../assets/xaaane.png";
 import searching from "../assets/searching.gif";
@@ -50,7 +30,8 @@ import "./index.css";
 		<script type="importmap">
 			{
 				"imports": {
-					"three": "https://unpkg.com/three@0.161.0/build/three.module.js"
+					"three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+					"three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
 				}
 			}
 		</script>
@@ -90,193 +71,132 @@ import "./index.css";
 					</div>
 					<marquee scrollamount="3px" behavior="alternate">
 						<p>
-							bug boy | leftover spaghetti | ぜいん | creating | #bfff00 |
-							red-slime | 3D | dragonfly | grip tape | blue shift | loving
+							cyberspace | bug boy | leftover spaghetti | dumb data | #bfff00 |
+							red-slime | 3D | dragonfly | grip tape | blue shift | ULTRV |
+							lucky | milk man
 						</p>
 					</marquee>
 					<div class="marquee">
 						<p>
-							bug boy | leftover spaghetti | ぜいん | creating | #bfff00 |
-							red-slime | 3D | dragonfly | grip tape | blue shift | loving
+							cyberspace | bug boy | leftover spaghetti | dumb data | #bfff00 |
+							red-slime | 3D | dragonfly | grip tape | blue shift | ULTRV |
+							lucky | milk man
 						</p>
 					</div>
 				</div>
 			</div>
 			<div class="work">
-				<a
-					href="https://dickinsonarchitects.com/"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<div class="work-item">
-						<img
-							class="wireframe-site"
-							src={dickinsonWireframe}
-							alt="dickinson website wireframe"
-						/>
-						<img
-							class="color-site"
-							src={dickinsonColor}
-							alt="dickinson website color"
-						/>
-						<p>Dickinson Architects</p>
+				<div id="text1-con" class="about">
+					<div id="text" style="position:relative; height:100px;"></div>
+					<p style="line-height:1.5; text-wrap:balance;">
+						i can eat mcdonald's cheeseburgers in one bite - feels lucky to be
+						alive. hiked fuji as a kid and hawaii last year. there's nothing
+						like stepping on a skateboard and throwing yourself at concrete over
+						and over - i think lifes like that. i think lifes like eating fruit
+						roll-ups until you get a stomach ache, then doing it again. i chug
+						milk and i laugh hard. anyways, that's about it - see ya
+					</p>
+				</div>
+				<div class="clients" style="position:relative;">
+					<div id="text2-con">
+						<div id="text2" style="position:relative; height:100px; z-index:1;">
+						</div>
+
+						<a href="https://kruhu.com/" target="_blank" rel="noreferrer"
+							>the kru</a
+						>
+						<p>-</p>
+						<a
+							href="https://www.atomic.health/"
+							target="_blank"
+							rel="noreferrer">atomic health</a
+						>
+						<p>-</p>
+						<a href="https://meetmoniker.com/" target="_blank" rel="noreferrer"
+							>moniker</a
+						>
+						<p>-</p>
+						<a
+							href="https://omegadigitalonline.com/"
+							target="_blank"
+							rel="noreferrer">omega</a
+						>
 					</div>
-				</a>
-				<a
-					href="https://turnbacktheblock.com/"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<div class="work-item">
-						<img
-							class="wireframe-site"
-							src={tbtbWireframe}
-							alt="turn back the block website wireframe"
-						/>
-						<img
-							class="color-site"
-							src={tbtbColor}
-							alt="turn back the block website color"
-						/>
-						<p>Turn Back The Block</p>
+
+					<div id="text3-con" style="font-size: 0; text-wrap:balance;">
+						<div
+							id="text3"
+							style="position:relative; height:100px; margin-top:50px; z-index:1;"
+						>
+						</div>
+
+						<a
+							href="https://dickinsonarchitects.com/"
+							target="_blank"
+							rel="noreferrer">dickinson architects</a
+						>
+						<a href="https://jobs.masters.com/" target="_blank" rel="noreferrer"
+							>augusta masters</a
+						>
+						<a href="https://h1.co/" target="_blank" rel="noreferrer">h1</a>
+						<a
+							href="https://www.visitcolumbiacountyga.com/"
+							target="_blank"
+							rel="noreferrer">columbia county</a
+						>
+						<a
+							href="https://turnbacktheblock.com/"
+							target="_blank"
+							rel="noreferrer">turn back the block</a
+						>
+						<a
+							href="https://sagevalleygolf.com/"
+							target="_blank"
+							rel="noreferrer">sage valley</a
+						>
+						<a
+							href="https://academyartmuseum.org/"
+							target="_blank"
+							rel="noreferrer">academy art</a
+						>
+						<a href="https://www.cinq.care/" target="_blank" rel="noreferrer"
+							>cinqcare</a
+						>
+						<a href="https://amphealth.com/" target="_blank" rel="noreferrer"
+							>amp health</a
+						>
+						<a href="https://www.neovance.com/" target="_blank" rel="noreferrer"
+							>neovance</a
+						>
+						<a
+							href="https://coniferhealth.com/"
+							target="_blank"
+							rel="noreferrer">conifer health</a
+						>
+						<a href="https://www.datavant.com/" target="_blank" rel="noreferrer"
+							>datavant</a
+						>
+						<a href="https://flashpoint.io/" target="_blank" rel="noreferrer"
+							>flashpoint</a
+						>
+						<a href="https://ehc.consulting/" target="_blank" rel="noreferrer"
+							>ehc consulting</a
+						>
+						<a
+							href="https://www.coronishealth.com/"
+							target="_blank"
+							rel="noreferrer">coronis health</a
+						>
+						<a href="https://dashealth.com/" target="_blank" rel="noreferrer"
+							>das health</a
+						>
+						<a
+							href="#"
+							style="cursor:default; pointer-events:none; font-style:italic;"
+							>amongst others..</a
+						>
 					</div>
-				</a>
-				<a
-					href="https://academyartmuseum.org/"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<div class="work-item">
-						<img
-							class="wireframe-site"
-							src={academyWireframe}
-							alt="academy art website wireframe"
-						/>
-						<img
-							class="color-site"
-							src={academyColor}
-							alt="academy art website color"
-						/>
-						<p>Academy Art</p>
-					</div>
-				</a>
-				<a href="https://sagevalleygolf.com/" target="_blank" rel="noreferrer">
-					<div class="work-item">
-						<img
-							class="wireframe-site"
-							src={sageWireframe}
-							alt="sage valley website wireframe"
-						/>
-						<img
-							class="color-site"
-							src={sageColor}
-							alt="sage valley website color"
-						/>
-						<p>Sage Valley</p>
-					</div>
-				</a>
-				<a href="https://fieldbotanicals.com/" target="_blank" rel="noreferrer">
-					<div class="work-item">
-						<img
-							class="wireframe-site"
-							src={fieldWireframe}
-							alt="field botanicals website wireframe"
-						/>
-						<img
-							class="color-site"
-							src={fieldColor}
-							alt="field botanicals website color"
-						/>
-						<p>Field Botanicals</p>
-					</div>
-				</a>
-				<a
-					href="https://seaislandservices.com/"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<div class="work-item">
-						<img
-							class="wireframe-site"
-							src={seaWireframe}
-							alt="sea island website wireframe"
-						/>
-						<img
-							class="color-site"
-							src={seaColor}
-							alt="sea island website color"
-						/>
-						<p>Sea Island</p>
-					</div>
-				</a>
-				<a href="https://galakecountry.com/" target="_blank" rel="noreferrer">
-					<div class="work-item">
-						<img
-							class="wireframe-site"
-							src={georgiaWireframe}
-							alt="goergia lake country website wireframe"
-						/>
-						<img
-							class="color-site"
-							src={georgiaColor}
-							alt="georgia lake country website color"
-						/>
-						<p>Lake Country</p>
-					</div>
-				</a>
-				<a
-					href="https://www.augustadatastorage.com/"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<div class="work-item">
-						<img
-							class="wireframe-site"
-							src={dataWireframe}
-							alt="augusta data storage website wireframe"
-						/>
-						<img
-							class="color-site"
-							src={dataColor}
-							alt="augusta data storage color"
-						/>
-						<p>Data Storage</p>
-					</div>
-				</a>
-				<a href="https://meetmoniker.com/" target="_blank" rel="noreferrer">
-					<div class="work-item">
-						<img
-							class="wireframe-site"
-							src={monikerWireframe}
-							alt="moniker website wireframe"
-						/>
-						<img
-							class="color-site"
-							src={monikerColor}
-							alt="moniker website color"
-						/>
-						<p>Moniker</p>
-					</div>
-				</a>
-				<a
-					href="https://kendrickbodyshop.com/"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<div class="work-item">
-						<img
-							class="wireframe-site"
-							src={kendrickWireframe}
-							alt="kendrick body shop website wireframe"
-						/>
-						<img
-							class="color-site"
-							src={kendrickColor}
-							alt="kendrick body shop website color"
-						/>
-						<p>Kendrick</p>
-					</div>
-				</a>
+				</div>
 			</div>
 			<a class="work-with-me" href="mailto:web@xaaane.com">get a site</a>
 		</div>
@@ -304,7 +224,7 @@ import "./index.css";
 			};
 		</script>
 		<script>
-			// Cursor
+			// cursor
 			const myCircle = document.getElementById("circle");
 			const ico = document.getElementById("ico");
 			const cursorSize = myCircle.offsetWidth;
@@ -312,14 +232,25 @@ import "./index.css";
 			// get the dimensions and position of the ico element
 			const rect = ico.getBoundingClientRect();
 
+			let originLocked = false;
+
 			// calculate the center of the ico element
 			let mousePos = {
 				x: rect.left + (rect.width - cursorSize) / 2,
 				y: rect.top + (rect.height - cursorSize) / 2,
 			};
 
+			function returnCircleToOrigin() {
+				originLocked = true;
+				const icoRect = ico.getBoundingClientRect();
+				mousePos.x = icoRect.left + (icoRect.width - cursorSize) / 2;
+				mousePos.y =
+					icoRect.top + (icoRect.height - cursorSize) / 2 + window.scrollY;
+			}
+
 			const myMouse = {
 				follow: function (event) {
+					if (originLocked) return;
 					const width = document.documentElement.clientWidth - cursorSize;
 					const height = document.documentElement.scrollHeight - cursorSize;
 
@@ -333,6 +264,22 @@ import "./index.css";
 					mousePos.y = y;
 				},
 			};
+
+			// const sendHimHome = document.querySelector(".send-him-home");
+			// sendHimHome.addEventListener("mouseenter", returnCircleToOrigin);
+			// sendHimHome.addEventListener("mouseleave", () => (originLocked = false));
+
+			const clientLinks = document.querySelectorAll(".clients a");
+			for (let link of clientLinks) {
+				const width = link.getBoundingClientRect().width;
+				link.style.width = width + 12 + "px";
+			}
+
+			// const clientLinks = document.getElementsByClassName("send-him-home");
+			// for (let link of clientLinks) {
+			// 	link.addEventListener("mouseover", returnCircleToOrigin);
+			// 	link.addEventListener("mouseout", () => (originLocked = false)); // Release lock when leaving
+			// }
 
 			function updateCirclePosition() {
 				myCircle.style.left = mousePos.x + "px";
@@ -358,26 +305,12 @@ import "./index.css";
 				});
 			}
 
-			// Get all <a> elements within the parent class of 'work'
-			const workLinks = document.querySelectorAll(".work a");
-			for (let link of workLinks) {
-				// Scale myCircle to 200% when mouse is over <a> tag within the parent class of 'work'
-				link.addEventListener("mouseover", function () {
-					myCircle.style.transform = "scale(2)";
-				});
-
-				// Remove transform when mouse leaves the <a> tag
-				link.addEventListener("mouseout", function () {
-					myCircle.style.transform = "scale(1)";
-				});
-			}
-
 			// CSS Styles for mobile
 			function isElementCentered(el) {
 				var rect = el.getBoundingClientRect();
 				var viewHeight = Math.max(
 					document.documentElement.clientHeight,
-					window.innerHeight
+					window.innerHeight,
 				);
 				var quarterHeight = viewHeight / 4;
 				return rect.top > quarterHeight && rect.bottom < quarterHeight * 3;
@@ -385,13 +318,13 @@ import "./index.css";
 
 			function adjustStyles() {
 				let workItems = document.querySelectorAll(
-					".container .work a .work-item"
+					".container .work a .work-item",
 				);
 				let wireframeSiteItems = document.querySelectorAll(
-					".container .work a .work-item > .wireframe-site"
+					".container .work a .work-item > .wireframe-site",
 				);
 				let colorSiteItems = document.querySelectorAll(
-					".container .work a .work-item > .color-site"
+					".container .work a .work-item > .color-site",
 				);
 
 				if (window.innerWidth <= 459) {
@@ -421,6 +354,7 @@ import "./index.css";
 		</script>
 
 		<script>
+			// iso three
 			import * as THREE from "three";
 			// Icosahedron
 			var scene = new THREE.Scene();
@@ -454,7 +388,7 @@ import "./index.css";
 			var target = new THREE.Vector2();
 			var windowHalf = new THREE.Vector2(
 				window.innerWidth / 2,
-				window.innerHeight / 2
+				window.innerHeight / 2,
 			);
 
 			function onMouseOrTouchMove(event) {
@@ -482,6 +416,317 @@ import "./index.css";
 			}
 
 			animate();
+		</script>
+
+		<script type="module">
+			// 3D Text - Reusable Function
+			import * as THREE from "three";
+			import { FontLoader } from "three/addons/loaders/FontLoader.js";
+			import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
+
+			// Shared mouse tracking
+			var mouse = new THREE.Vector2();
+			var windowHalf = new THREE.Vector2(
+				window.innerWidth / 2,
+				window.innerHeight / 2,
+			);
+
+			function onMouseOrTouchMove(event) {
+				if (event.type == "touchmove") {
+					mouse.x = event.touches[0].clientX - windowHalf.x;
+					mouse.y = event.touches[0].clientY - windowHalf.y;
+				} else {
+					mouse.x = event.clientX - windowHalf.x;
+					mouse.y = event.clientY - windowHalf.y;
+				}
+			}
+
+			window.addEventListener("mousemove", onMouseOrTouchMove, false);
+			window.addEventListener("touchmove", onMouseOrTouchMove, false);
+
+			// Reusable function to create 3D text
+			function create3DText(config) {
+				const {
+					containerId,
+					text,
+					size = 0.75,
+					height = 0.1,
+					color = 0xffffff,
+					rendererWidth = 200,
+					rendererHeight = 200,
+					topOffset = "-50px",
+					leftOffset = "0",
+					maxRotationX = Math.PI / 6,
+					maxRotationY = Math.PI / 6,
+					rotationSpeed = 0.05,
+					rotationMultiplierX = 1,
+					rotationMultiplierY = 1,
+					invertX = false,
+					invertY = false,
+					cameraZ = 2,
+					hoverColor = 0xbfff00,
+					fontPath = "/src/assets/times-new-roman.json",
+					centerStateRef = null,
+				} = config;
+
+				const scene = new THREE.Scene();
+
+				// Calculate aspect ratio
+				const aspect = rendererWidth / rendererHeight;
+				const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
+				camera.position.set(0, 0, cameraZ);
+
+				const renderer = new THREE.WebGLRenderer({
+					alpha: true,
+					antialias: true,
+				});
+				const container = document.getElementById(containerId);
+				renderer.setSize(rendererWidth, rendererHeight);
+				renderer.domElement.style.position = "absolute";
+				renderer.domElement.style.top = topOffset;
+				renderer.domElement.style.left = leftOffset;
+				container.appendChild(renderer.domElement);
+
+				// Color Control
+				const currentColor = new THREE.Color(color);
+				const hoverColorObj = new THREE.Color(hoverColor);
+				let isHovered = false;
+
+				container.parentElement.addEventListener(
+					"mouseenter",
+					() => (isHovered = true),
+				);
+				container.parentElement.addEventListener(
+					"mouseleave",
+					() => (isHovered = false),
+				);
+
+				// Add lighting
+				const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+				scene.add(ambientLight);
+				const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+				directionalLight.position.set(2, 2, 5);
+				scene.add(directionalLight);
+
+				let textMesh;
+				var target = new THREE.Vector2();
+
+				// Load font and create text
+				const loader = new FontLoader();
+				loader.load(fontPath, function (font) {
+					const textGeometry = new TextGeometry(text, {
+						font: font,
+						size: size,
+						height: height,
+						curveSegments: 12,
+					});
+					textGeometry.center();
+
+					const edges = new THREE.EdgesGeometry(textGeometry, 15);
+					const material = new THREE.LineBasicMaterial({ color: color });
+					textMesh = new THREE.LineSegments(edges, material);
+					scene.add(textMesh);
+				});
+
+				function animate() {
+					requestAnimationFrame(animate);
+
+					if (textMesh) {
+						// Apply multipliers and inversions
+						target.x =
+							(1 - mouse.x) * 0.003 * rotationMultiplierX * (invertX ? -1 : 1);
+						target.y =
+							(1 - mouse.y) * 0.003 * rotationMultiplierY * (invertY ? -1 : 1);
+
+						// Apply separate constraints for X and Y
+						target.x = Math.max(
+							-maxRotationY,
+							Math.min(maxRotationY, target.x),
+						);
+						target.y = Math.max(
+							-maxRotationX,
+							Math.min(maxRotationX, target.y),
+						);
+
+						textMesh.rotation.x +=
+							rotationSpeed * (target.y - textMesh.rotation.x);
+						textMesh.rotation.y +=
+							rotationSpeed * (target.x - textMesh.rotation.y);
+
+						const isCentered = centerStateRef ? centerStateRef() : false;
+						const shouldHighlight = isHovered || isCentered;
+						const targetColor = shouldHighlight ? hoverColorObj : currentColor;
+						textMesh.material.color.lerp(targetColor, 0.1);
+					}
+
+					renderer.render(scene, camera);
+				}
+				animate();
+			}
+
+			// Mobile scroll detection for centered elements - DECLARE THIS FIRST
+			const centerStates = {
+				text1: false,
+				text2: false,
+				text3: false,
+			};
+
+			let text2AnimInterval = null;
+			let text3AnimInterval = null;
+
+			if (window.innerWidth <= 768) {
+				const text1Con = document.getElementById("text1-con");
+				const text2Con = document.getElementById("text2-con");
+				const text3Con = document.getElementById("text3-con");
+
+				const text2Links = Array.from(text2Con.querySelectorAll("a"));
+				const text3Links = Array.from(
+					text3Con.querySelectorAll("a:not([style*='pointer-events'])"),
+				); // Exclude the disabled one
+
+				let currentText2Link = null;
+				let currentText3Link = null;
+
+				function animateRandomLink(links, getCurrentLink, setCurrentLink) {
+					// Remove animation from previous link
+					const currentLink = getCurrentLink();
+					if (currentLink) {
+						currentLink.style.animation = "";
+					}
+
+					// Pick a random link that's different from current
+					let availableLinks = links.filter((link) => link !== currentLink);
+					if (availableLinks.length === 0) availableLinks = links; // Fallback if only one link
+
+					const randomIndex = Math.floor(Math.random() * availableLinks.length);
+					const newLink = availableLinks[randomIndex];
+
+					// Add animation
+					newLink.style.animation = "typeshift 0.8s steps(1) infinite";
+					setCurrentLink(newLink);
+				}
+
+				function checkCentered() {
+					const viewportCenter = window.innerHeight / 2;
+					const threshold = 100; // pixels from center to trigger
+
+					// Check text1-con
+					const rect1 = text1Con.getBoundingClientRect();
+					const center1 = rect1.top + rect1.height / 2;
+					centerStates.text1 = Math.abs(center1 - viewportCenter) < threshold;
+
+					// Check text2-con
+					const rect2 = text2Con.getBoundingClientRect();
+					const center2 = rect2.top + rect2.height / 2;
+					const wasCentered2 = centerStates.text2;
+					centerStates.text2 = Math.abs(center2 - viewportCenter) < threshold;
+
+					// Start/stop text2 animation
+					if (centerStates.text2 && !wasCentered2) {
+						// Just became centered - start animation
+						animateRandomLink(
+							text2Links,
+							() => currentText2Link,
+							(link) => (currentText2Link = link),
+						);
+						text2AnimInterval = setInterval(() => {
+							animateRandomLink(
+								text2Links,
+								() => currentText2Link,
+								(link) => (currentText2Link = link),
+							);
+						}, 3000);
+					} else if (!centerStates.text2 && wasCentered2) {
+						// Just left center - stop animation immediately
+						clearInterval(text2AnimInterval);
+						text2AnimInterval = null;
+						if (currentText2Link) {
+							currentText2Link.style.animation = "";
+							currentText2Link = null;
+						}
+					}
+
+					// Check text3-con
+					const rect3 = text3Con.getBoundingClientRect();
+					const center3 = rect3.top + rect3.height / 2;
+					const wasCentered3 = centerStates.text3;
+					centerStates.text3 = Math.abs(center3 - viewportCenter) < threshold;
+
+					// Start/stop text3 animation
+					if (centerStates.text3 && !wasCentered3) {
+						// Just became centered - start animation
+						animateRandomLink(
+							text3Links,
+							() => currentText3Link,
+							(link) => (currentText3Link = link),
+						);
+						text3AnimInterval = setInterval(() => {
+							animateRandomLink(
+								text3Links,
+								() => currentText3Link,
+								(link) => (currentText3Link = link),
+							);
+						}, 3000);
+					} else if (!centerStates.text3 && wasCentered3) {
+						// Just left center - stop animation immediately
+						clearInterval(text3AnimInterval);
+						text3AnimInterval = null;
+						if (currentText3Link) {
+							currentText3Link.style.animation = "";
+							currentText3Link = null;
+						}
+					}
+				}
+
+				window.addEventListener("scroll", checkCentered);
+				window.addEventListener("resize", checkCentered);
+				checkCentered(); // Initial check
+			}
+
+			// Create your text elements with different canvas sizes
+			create3DText({
+				containerId: "text",
+				text: "about",
+				size: 0.75,
+				cameraZ: 2, // Adjust this to control how "zoomed in" the text appears
+				topOffset: "-50px",
+				maxRotationX: Math.PI / 6, // 30 degrees
+				maxRotationY: Math.PI / 6, // 30 degrees
+				hoverColor: 0xff4000,
+				centerStateRef: () => centerStates.text1,
+			});
+
+			create3DText({
+				containerId: "text2",
+				text: "teams",
+				size: 0.75, // Keep size the same
+				//rendererWidth: 250,
+				// rendererHeight: 250,
+				cameraZ: 2, // Keep camera distance the same for consistent size
+				//color: 0xff0000,
+				topOffset: "-50px",
+				maxRotationX: Math.PI / 4, // 45 degrees - more tilt
+				maxRotationY: Math.PI / 8, // 22.5 degrees - less spin
+				invertY: true,
+				rotationMultiplierX: 2,
+				centerStateRef: () => centerStates.text2,
+			});
+
+			create3DText({
+				containerId: "text3",
+				text: "work",
+				size: 0.75, // Keep size the same
+				//rendererWidth: 250,
+				//rendererHeight: 250,
+				//cameraZ: 2.5, // Keep camera distance the same for consistent size
+				//color: 0x00ffff,
+				maxRotationX: Math.PI / 12, // 15 degrees - very limited tilt
+				maxRotationY: Math.PI / 3, // 60 degrees - lots of spin
+				invertX: true,
+				hoverColor: 0x4000ff,
+				leftOffset: "100px",
+				centerStateRef: () => centerStates.text3,
+			});
 		</script>
 	</body>
 </html>
