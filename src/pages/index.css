@@ -63,6 +63,7 @@ a {
 	position: relative;
 	max-width: 1000px;
 	padding: 20px;
+	overflow-x: hidden;
 }
 
 .container .header {
@@ -289,6 +290,7 @@ a {
 	.work .clients {
 		margin: 0 auto;
 		max-width: 400px;
+		overflow-x: hidden;
 	}
 
 	#text {
@@ -319,6 +321,14 @@ a {
 	line-height: 2;
 	&:hover {
 		animation: typeshift 0.8s steps(1) infinite;
+	}
+}
+
+@media only screen and (max-width: 431px) {
+	.clients a {
+		&:hover {
+			animation: none;
+		}
 	}
 }
 
@@ -436,6 +446,12 @@ a {
 
 .client-link-wrapper:hover > .tooltip {
 	visibility: visible;
+}
+
+@media only screen and (max-width: 431px) {
+	.client-link-wrapper:hover > .tooltip {
+		visibility: hidden;
+	}
 }
 
 @media only screen and (max-width: 768px) {
