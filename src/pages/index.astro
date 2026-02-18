@@ -6,6 +6,9 @@ import later from "../assets/later.gif";
 import shutdown from "../assets/shutdown.gif";
 import warping from "../assets/warping.gif";
 import handy from "../assets/handy.gif";
+
+import frame from "/tooltip.gif";
+import dickinsons from "../assets/dickinson-architects.jpg";
 import "./index.css";
 ---
 
@@ -94,7 +97,7 @@ import "./index.css";
 						like stepping on a skateboard and throwing yourself at concrete over
 						and over - i think lifes like that. i think lifes like eating fruit
 						roll-ups until you get a stomach ache, then doing it again. i chug
-						milk and i laugh hard. anyways, that's about it - see ya
+						milk and i laugh hard. anyways, that's about it. see ya
 					</p>
 				</div>
 				<div class="clients" style="position:relative;">
@@ -102,25 +105,55 @@ import "./index.css";
 						<div id="text2" style="position:relative; height:100px; z-index:1;">
 						</div>
 
-						<a href="https://kruhu.com/" target="_blank" rel="noreferrer"
-							>the kru</a
-						>
+						<span class="client-link-wrapper">
+							<a href="https://kruhu.com/" target="_blank" rel="noreferrer"
+								>the kru</a
+							>
+							<span class="tooltip">
+								best creative agency in augusta, sharpened my teeth here.
+								introduced security, hosting plans, brought headless into the
+								stack. killer team & sick office.
+							</span>
+						</span>
 						<p>-</p>
-						<a
-							href="https://www.atomic.health/"
-							target="_blank"
-							rel="noreferrer">atomic health</a
-						>
+						<span class="client-link-wrapper">
+							<a
+								href="https://www.atomic.health/"
+								target="_blank"
+								rel="noreferrer">atomic health</a
+							>
+							<span class="tooltip">
+								an industry leader in healthcare marketing, developed fangs.
+								managed devs across async projects, built new technologies.
+								super talented leadership.
+							</span>
+						</span>
 						<p>-</p>
-						<a href="https://meetmoniker.com/" target="_blank" rel="noreferrer"
-							>moniker</a
-						>
+						<span class="client-link-wrapper">
+							<a
+								href="https://www.blinkpath.com/"
+								target="_blank"
+								rel="noreferrer">blinkpath</a
+							>
+							<span class="tooltip">
+								top tier marketing agency focused on tech, big clients with gov
+								contracts. def more cutting edge projects with slick designs in
+								this industry, had a lot of fun.
+							</span>
+						</span>
 						<p>-</p>
-						<a
-							href="https://omegadigitalonline.com/"
-							target="_blank"
-							rel="noreferrer">omega</a
-						>
+						<span class="client-link-wrapper">
+							<a
+								href="https://omegadigitalonline.com/"
+								target="_blank"
+								rel="noreferrer">omega</a
+							>
+							<span class="tooltip">
+								omega was my first step into the marketing game, cut my teeth
+								here. designs, development, copywriting and seo, etc. good, fast
+								work for small businesses.
+							</span>
+						</span>
 					</div>
 
 					<div id="text3-con" style="font-size: 0; text-wrap:balance;">
@@ -133,8 +166,13 @@ import "./index.css";
 						<a
 							href="https://dickinsonarchitects.com/"
 							target="_blank"
-							rel="noreferrer">dickinson architects</a
-						>
+							rel="noreferrer"
+							>dickinson architects
+							<!-- <span class="tooltip">
+								<img src={dickinsons} />
+								<img class="frame" src={frame} />
+							</span> -->
+						</a>
 						<a href="https://jobs.masters.com/" target="_blank" rel="noreferrer"
 							>augusta masters</a
 						>

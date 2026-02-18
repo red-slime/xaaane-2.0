@@ -28,6 +28,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	overflow-x: hidden;
+	text-shadow: 0px 0px 1px rgba(255, 0, 0, 0.5); /* warm huh? */
 }
 
 a {
@@ -149,6 +150,17 @@ a {
 	display: inline-block;
 	padding-left: 100%;
 	color: white;
+	animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-100%, 0);
+	}
 }
 
 .cube {
@@ -159,6 +171,12 @@ a {
 	height: 100%;
 	transform-style: preserve-3d;
 	animation: rotateCube 60s ease-in-out infinite;
+}
+
+@media only screen and (max-width: 459px) {
+	.cube {
+		animation: rotateCube 36s ease-in-out infinite;
+	}
 }
 
 @keyframes rotateCube {
@@ -289,89 +307,6 @@ a {
 	color: #fff;
 }
 
-/* .hide {
-@media only screen and (max-width: 1200px) {
-	.container .work {
-		grid-template-columns: repeat(4, minmax(200px, 1fr));
-	}
-}
-
-@media only screen and (max-width: 960px) {
-	.container .work {
-		grid-template-columns: repeat(3, minmax(200px, 1fr));
-	}
-}
-
-@media only screen and (max-width: 720px) {
-	.container .work {
-		grid-template-columns: repeat(2, minmax(200px, 1fr));
-		gap: 40px 20px;
-	}
-}
-
-@media only screen and (max-width: 459px) {
-	.container .work {
-		grid-template-columns: repeat(1, 1fr);
-		justify-items: center;
-	}
-}
-
-@media only screen and (max-width: 459px) {
-	.container .work {
-		flex-direction: row;
-		justify-content: center;
-		row-gap: 60px;
-		margin-top: 30px;
-		padding-bottom: 40px;
-	}
-}
-
-.container .work a {
-	display: block;
-}
-
-.container .work a .work-item {
-	position: relative;
-	width: 200px;
-	height: 200px;
-	transition: all 0.2s linear;
-}
-
-.container .work a p {
-	position: relative;
-	top: 205px;
-	color: white;
-}
-
-.container .work a img {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: 0 0;
-}
-
-.container .work a .wireframe-site {
-	opacity: 1;
-	transition: all 0.2s linear;
-}
-
-.container .work a .color-site {
-	opacity: 0;
-	filter: grayscale(100%);
-	transition: all 0.2s linear;
-}
-
-.container .work a .work-item:hover > .wireframe-site {
-	opacity: 0;
-}
-
-.container .work a .work-item:hover > .color-site {
-	opacity: 1;
-	filter: none;
-}
-} */
-
 .clients a {
 	position: relative;
 	display: inline-block;
@@ -429,6 +364,78 @@ a {
 	margin-bottom: 120px;
 	border: 1px solid white;
 	color: white;
+}
+
+.tooltip {
+	visibility: hidden;
+	width: 360px;
+	background-color: rgba(0, 0, 0, 0.9);
+	position: absolute;
+	bottom: -70px;
+	left: -100px;
+	z-index: 9;
+	display: flex;
+	justify-content: flex-start;
+	text-align: left;
+	align-items: center;
+	line-height: 1.25;
+	overflow: hidden;
+	color: #bfff00;
+}
+
+/* .tooltip {
+	visibility: hidden;
+	width: 210px;
+	aspect-ratio: 1 / 1;
+	background-image: url("/tooltip.gif"),
+		radial-gradient(rgba(0, 0, 0, 0.8) 70%, transparent);
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 0 28px;
+	position: absolute;
+	bottom: -210px;
+	left: -50px;
+	z-index: 9;
+	display: flex;
+	justify-content: flex-start;
+	text-align: left;
+	align-items: center;
+	line-height: 1.25;
+	overflow: hidden;
+} */
+
+/* .tooltip:has(img) {
+	padding: 0;
+	display: block;
+	background-image: radial-gradient(rgba(0, 0, 0, 0.5) 70%, transparent);
+}
+
+.tooltip img {
+	width: 190px;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	position: relative;
+	top: 12px;
+	left: 12px;
+	border-radius: 10px;
+}
+
+.tooltip img.frame {
+	width: 210px;
+	aspect-ratio: 1 / 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	filter: invert(1);
+} */
+
+.client-link-wrapper {
+	position: relative;
+}
+
+.client-link-wrapper:hover > .tooltip {
+	visibility: visible;
 }
 
 @media only screen and (max-width: 768px) {
