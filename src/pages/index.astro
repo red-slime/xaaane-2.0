@@ -100,7 +100,7 @@ import "./index.css";
 					<div id="ico"></div>
 					<div class="text">
 						<h1>XAAANE</h1>
-						<p>full-stack web developer</p>
+						<p>full-stack web dev</p>
 						<a href="mailto:web@xaaane.com">web@xaaane.com</a>
 					</div>
 				</div>
@@ -117,30 +117,45 @@ import "./index.css";
 					<marquee scrollamount="2px" behavior="alternate">
 						<p>
 							cyberspace | bug boy | leftover spaghetti | dumb data | #bfff00 |
-							red-slime | 3D | dragonfly | grip tape | blue shift | ULTRV |
+							red-slime | 3D | dragonfly | griptape | blue shift | full-dive |
 							lucky | milk man
 						</p>
 					</marquee>
 					<div class="marquee">
 						<p>
 							cyberspace | bug boy | leftover spaghetti | dumb data | #bfff00 |
-							red-slime | 3D | dragonfly | grip tape | blue shift | ULTRV |
+							red-slime | 3D | dragonfly | griptape | blue shift | full-dive |
 							lucky | milk man
 						</p>
 					</div>
 				</div>
 			</div>
 			<div class="work">
-				<div id="text1-con" class="about">
-					<div id="text" style="position:relative; height:100px;"></div>
-					<p style="line-height:1.5; text-wrap:balance;">
-						i can eat mcdonald's cheeseburgers in one bite - feels lucky to be
-						alive. hiked fuji as a kid and hawaii last year. there's nothing
-						like stepping on a skateboard and throwing yourself at concrete over
-						and over - i think lifes like that. i think lifes like eating fruit
-						roll-ups until you get a stomach ache, then doing it again. i chug
-						milk and i laugh hard. anyways, that's about it. see ya
-					</p>
+				<div class="about-hats">
+					<div id="text1-con" class="about">
+						<div id="text" style="position:relative; height:100px;"></div>
+						<p style="line-height:1.5; text-wrap:balance;">
+							i eat mcdonalds cheeseburgers in one bite. i like the feeling of
+							falling. simple pleasures bring me comfort. i dream every night
+							and it feels like forever. lifes good even when its bad. i chug
+							milk and i laugh hard. anyways, that's about it. see ya
+						</p>
+					</div>
+					<div id="text4-con-desktop" class="hats desktop">
+						<div
+							id="text4-desktop"
+							style="position:relative; height:100px; margin-top:50px;"
+						>
+						</div>
+						<p
+							style="line-height:1.5; text-wrap:balance; position:relative; left:30px;"
+						>
+							leadership, team management, client speak, databases, migrations,
+							accessibility, apis, resourcing, workflows, toolchains, systems,
+							project management, networks, plugins, headless, repos,
+							frameworks, seo, experience, design
+						</p>
+					</div>
 				</div>
 				<div class="clients" style="position:relative;">
 					<div id="text2-con">
@@ -180,7 +195,7 @@ import "./index.css";
 							<span class="tooltip">
 								top tier marketing agency focused on tech, big clients with gov
 								contracts. def more cutting edge projects with slick designs in
-								this industry, had a lot of fun.
+								this industry.
 							</span>
 						</span>
 						<p>-</p>
@@ -190,7 +205,7 @@ import "./index.css";
 								target="_blank"
 								rel="noreferrer">omega</a
 							>
-							<span class="tooltip">
+							<span class="tooltip last">
 								omega was my first step into the marketing game, cut my teeth
 								here. designs, development, copywriting and seo, etc. good, fast
 								work for small businesses.
@@ -206,6 +221,15 @@ import "./index.css";
 						</div>
 
 						<a
+							href="https://www.visitcolumbiacountyga.com/"
+							target="_blank"
+							rel="noreferrer">columbia county</a
+						>
+						<a href="https://jobs.masters.com/" target="_blank" rel="noreferrer"
+							>augusta masters</a
+						>
+						<a href="https://h1.co/" target="_blank" rel="noreferrer">h1</a>
+						<a
 							href="https://dickinsonarchitects.com/"
 							target="_blank"
 							rel="noreferrer"
@@ -215,20 +239,7 @@ import "./index.css";
 								<img class="frame" src={frame} />
 							</span> -->
 						</a>
-						<a href="https://jobs.masters.com/" target="_blank" rel="noreferrer"
-							>augusta masters</a
-						>
-						<a href="https://h1.co/" target="_blank" rel="noreferrer">h1</a>
-						<a
-							href="https://www.visitcolumbiacountyga.com/"
-							target="_blank"
-							rel="noreferrer">columbia county</a
-						>
-						<a
-							href="https://turnbacktheblock.com/"
-							target="_blank"
-							rel="noreferrer">turn back the block</a
-						>
+
 						<a
 							href="https://sagevalleygolf.com/"
 							target="_blank"
@@ -238,6 +249,11 @@ import "./index.css";
 							href="https://academyartmuseum.org/"
 							target="_blank"
 							rel="noreferrer">academy art</a
+						>
+						<a
+							href="https://turnbacktheblock.com/"
+							target="_blank"
+							rel="noreferrer">turn back the block</a
 						>
 						<a href="https://www.cinq.care/" target="_blank" rel="noreferrer"
 							>cinqcare</a
@@ -276,9 +292,24 @@ import "./index.css";
 							>amongst others..</a
 						>
 					</div>
+
+					<div id="text4-con" class="hats mobile">
+						<div
+							id="text4"
+							style="position:relative; height:100px; margin-top:50px;"
+						>
+						</div>
+						<p style="line-height:1.5; text-wrap:balance;">
+							leadership, team management, client speak, databases, migrations,
+							accessibility, apis, resourcing, workflows, toolchains, systems,
+							project management, networks, plugins, headless, repos,
+							frameworks, seo, experience, design
+						</p>
+					</div>
 				</div>
 			</div>
-			<a class="work-with-me" href="mailto:web@xaaane.com">get a site</a>
+			<a class="work-with-me" href="mailto:web@xaaane.com">work with me</a>
+			<div id="hands"><img src="/hands.png" /></div>
 		</div>
 		<script>
 			// Check for Safari, the new IE
@@ -670,6 +701,7 @@ import "./index.css";
 			// Mobile scroll detection for centered elements - DECLARE THIS FIRST
 			const centerStates = {
 				text1: false,
+				text4: false,
 				text2: false,
 				text3: false,
 			};
@@ -679,6 +711,7 @@ import "./index.css";
 
 			if (window.innerWidth <= 768) {
 				const text1Con = document.getElementById("text1-con");
+				const text4Con = document.getElementById("text4-con"); // Mobile version only
 				const text2Con = document.getElementById("text2-con");
 				const text3Con = document.getElementById("text3-con");
 
@@ -717,6 +750,11 @@ import "./index.css";
 					const rect1 = text1Con.getBoundingClientRect();
 					const center1 = rect1.top + rect1.height / 2;
 					centerStates.text1 = Math.abs(center1 - viewportCenter) < threshold;
+
+					// Check text4-con (hats)
+					const rect4 = text4Con.getBoundingClientRect();
+					const center4 = rect4.top + rect4.height / 2;
+					centerStates.text4 = Math.abs(center4 - viewportCenter) < threshold;
 
 					// Check text2-con
 					const rect2 = text2Con.getBoundingClientRect();
@@ -795,8 +833,37 @@ import "./index.css";
 				topOffset: "-50px",
 				maxRotationX: Math.PI / 6, // 30 degrees
 				maxRotationY: Math.PI / 6, // 30 degrees
-				hoverColor: 0xff4000,
+				hoverColor: 0xff0000,
 				centerStateRef: () => centerStates.text1,
+			});
+
+			// Desktop version
+			create3DText({
+				containerId: "text4-desktop",
+				text: "hats",
+				size: 0.75,
+				cameraZ: 2,
+				topOffset: "-50px",
+				maxRotationX: Math.PI / 6,
+				maxRotationY: Math.PI / 20,
+				invertX: true,
+				leftOffset: "100px",
+				hoverColor: 0xff00bf,
+			});
+
+			// Mobile version (with center detection)
+			create3DText({
+				containerId: "text4",
+				text: "hats",
+				size: 0.75,
+				cameraZ: 2,
+				topOffset: "-50px",
+				maxRotationX: Math.PI / 6,
+				maxRotationY: Math.PI / 20,
+				invertX: true,
+				leftOffset: "0",
+				hoverColor: 0xff00bf,
+				centerStateRef: () => centerStates.text4,
 			});
 
 			create3DText({
@@ -810,7 +877,7 @@ import "./index.css";
 				topOffset: "-50px",
 				maxRotationX: Math.PI / 4, // 45 degrees - more tilt
 				maxRotationY: Math.PI / 8, // 22.5 degrees - less spin
-				invertY: true,
+				invertX: true,
 				rotationMultiplierX: 2,
 				centerStateRef: () => centerStates.text2,
 			});
@@ -825,7 +892,6 @@ import "./index.css";
 				//color: 0x00ffff,
 				maxRotationX: Math.PI / 12, // 15 degrees - very limited tilt
 				maxRotationY: Math.PI / 3, // 60 degrees - lots of spin
-				invertX: true,
 				hoverColor: 0x4000ff,
 				leftOffset: "100px",
 				centerStateRef: () => centerStates.text3,
