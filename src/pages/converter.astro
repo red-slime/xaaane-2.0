@@ -1,0 +1,186 @@
+---
+const files = [
+	{
+		name: "README.md",
+		title: "README",
+		description:
+			"Complete guide to using the HTML to WordPress migration toolkit",
+		type: "Documentation",
+	},
+	{
+		name: "HTML-to-Zen-Blocks-Converter.php",
+		title: "WordPress Plugin",
+		description:
+			"Import HTML sections and convert them to Zen Blocks in WordPress",
+		type: "PHP Plugin",
+	},
+	{
+		name: "html_section_cataloger_deluxe.py",
+		title: "Section Cataloger",
+		description:
+			"Python script to analyze and catalog HTML sections across your site",
+		type: "Python Script",
+	},
+	{
+		name: "html_script_cataloger_deluxe.py",
+		title: "Script Cataloger",
+		description:
+			"Python script to catalog all JavaScript files and their locations",
+		type: "Python Script",
+	},
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HTML to WordPress Converter Toolkit</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: "Times New Roman", Times, serif;
+				background: #000;
+				color: #fff;
+				padding: 40px 20px;
+				line-height: 1.6;
+			}
+
+			.container {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+
+			h1 {
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+				border-bottom: 2px solid #bfff00;
+				padding-bottom: 0.5rem;
+			}
+
+			.intro {
+				margin-bottom: 3rem;
+				font-size: 1.1rem;
+				color: #ccc;
+			}
+
+			.file-grid {
+				display: grid;
+				gap: 2rem;
+			}
+
+			.file-card {
+				background: #111;
+				border: 1px solid #333;
+				padding: 1.5rem;
+				transition: all 0.2s;
+			}
+
+			.file-card:hover {
+				border-color: #bfff00;
+				transform: translateY(-2px);
+			}
+
+			.file-type {
+				display: inline-block;
+				background: #bfff00;
+				color: #000;
+				padding: 0.25rem 0.75rem;
+				font-size: 0.8rem;
+				font-weight: bold;
+				margin-bottom: 1rem;
+				text-transform: uppercase;
+			}
+
+			.file-title {
+				font-size: 1.5rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.file-description {
+				color: #aaa;
+				margin-bottom: 1rem;
+			}
+
+			.download-link {
+				display: inline-block;
+				color: #bfff00;
+				text-decoration: none;
+				border: 1px solid #bfff00;
+				padding: 0.5rem 1rem;
+				transition: all 0.2s;
+			}
+
+			.download-link:hover {
+				background: #bfff00;
+				color: #000;
+			}
+
+			.back-link {
+				margin-top: 3rem;
+				text-align: center;
+			}
+
+			.back-link a {
+				color: #fff;
+				text-decoration: none;
+				border-bottom: 1px solid #fff;
+			}
+
+			.back-link a:hover {
+				color: #bfff00;
+				border-color: #bfff00;
+			}
+
+			@media (max-width: 768px) {
+				h1 {
+					font-size: 2rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>HTML to WordPress Converter Toolkit</h1>
+
+			<div class="intro">
+				<p>
+					Migration toolkit for converting static HTML sites into WordPress with
+					custom Zen Blocks. Includes Python cataloging scripts and a WordPress
+					plugin for automated imports.
+				</p>
+				<p style="margin-top: 1rem;">
+					Built by XAAANE for a migration project at Atomic Health.
+				</p>
+			</div>
+
+			<div class="file-grid">
+				{
+					files.map((file) => (
+						<div class="file-card">
+							<span class="file-type">{file.type}</span>
+							<h2 class="file-title">{file.title}</h2>
+							<p class="file-description">{file.description}</p>
+							<a
+								href={`/converter/${file.name}`}
+								class="download-link"
+								download
+							>
+								Download {file.name}
+							</a>
+						</div>
+					))
+				}
+			</div>
+
+			<div class="back-link">
+				<a href="/">← Back to Home</a>
+			</div>
+		</div>
+	</body>
+</html>
