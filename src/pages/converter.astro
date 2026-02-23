@@ -204,11 +204,7 @@ const files = [
 									View Code
 								</a>
 							) : (
-								<a
-									href={`/converter/${file.name}`}
-									class="view-link"
-									download
-								>
+								<a href={`/converter/${file.name}`} class="view-link" download>
 									Download
 								</a>
 							)}
@@ -218,7 +214,11 @@ const files = [
 			</div>
 
 			<div class="download-all">
-				<a href="/converter/html-to-wordpress-toolkit.zip" class="download-all-btn" download>
+				<a
+					href="/converter/html-to-wordpress-toolkit.zip"
+					class="download-all-btn"
+					download
+				>
 					Download All Files (ZIP)
 				</a>
 			</div>
