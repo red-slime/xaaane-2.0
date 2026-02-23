@@ -6,6 +6,7 @@ const files = [
 		description:
 			"Complete guide to using the HTML to WordPress migration toolkit",
 		type: "Documentation",
+		viewable: false, // Browsers don't display .md files nicely
 	},
 	{
 		name: "HTML-to-Zen-Blocks-Converter.php",
@@ -13,6 +14,7 @@ const files = [
 		description:
 			"Import HTML sections and convert them to Zen Blocks in WordPress",
 		type: "PHP Plugin",
+		viewable: true,
 	},
 	{
 		name: "html_section_cataloger_deluxe.py",
@@ -20,6 +22,7 @@ const files = [
 		description:
 			"Python script to analyze and catalog HTML sections across your site",
 		type: "Python Script",
+		viewable: true,
 	},
 	{
 		name: "html_script_cataloger_deluxe.py",
@@ -27,6 +30,7 @@ const files = [
 		description:
 			"Python script to catalog all JavaScript files and their locations",
 		type: "Python Script",
+		viewable: true,
 	},
 ];
 ---
@@ -107,7 +111,7 @@ const files = [
 				margin-bottom: 1rem;
 			}
 
-			.download-link {
+			.view-link {
 				display: inline-block;
 				color: #bfff00;
 				text-decoration: none;
@@ -116,13 +120,38 @@ const files = [
 				transition: all 0.2s;
 			}
 
-			.download-link:hover {
+			.view-link:hover {
 				background: #bfff00;
 				color: #000;
 			}
 
-			.back-link {
+			.download-all {
 				margin-top: 3rem;
+				text-align: center;
+				padding: 2rem 0;
+				border-top: 1px solid #333;
+			}
+
+			.download-all-btn {
+				display: inline-block;
+				background: #bfff00;
+				color: #000;
+				text-decoration: none;
+				padding: 1rem 2rem;
+				font-size: 1.1rem;
+				font-weight: bold;
+				border: none;
+				transition: all 0.2s;
+				text-transform: uppercase;
+			}
+
+			.download-all-btn:hover {
+				background: #fff;
+				transform: scale(1.05);
+			}
+
+			.back-link {
+				margin-top: 2rem;
 				text-align: center;
 			}
 
@@ -166,16 +195,32 @@ const files = [
 							<span class="file-type">{file.type}</span>
 							<h2 class="file-title">{file.title}</h2>
 							<p class="file-description">{file.description}</p>
-							<a
-								href={`/converter/${file.name}`}
-								class="download-link"
-								download
-							>
-								Download {file.name}
-							</a>
+							{file.viewable ? (
+								<a
+									href={`/converter/${file.name}`}
+									class="view-link"
+									target="_blank"
+								>
+									View Code
+								</a>
+							) : (
+								<a
+									href={`/converter/${file.name}`}
+									class="view-link"
+									download
+								>
+									Download
+								</a>
+							)}
 						</div>
 					))
 				}
+			</div>
+
+			<div class="download-all">
+				<a href="/converter/html-to-wordpress-toolkit.zip" class="download-all-btn" download>
+					Download All Files (ZIP)
+				</a>
 			</div>
 
 			<div class="back-link">
