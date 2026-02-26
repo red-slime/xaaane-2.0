@@ -1,0 +1,150 @@
+---
+const posts = [
+	{
+		slug: "welcome-to-my-blog",
+		title: "Welcome to My Blog",
+		date: "2026-02-26",
+		excerpt: "First post on the new blog. Testing out the setup and styling.",
+	},
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Blog - XAAANE</title>
+		<link rel="icon" type="image/png" href="/flavicon.png" />
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: "Times New Roman", Times, serif;
+				background: #000;
+				color: #fff;
+				padding: 40px 20px;
+				line-height: 1.6;
+			}
+
+			.container {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+
+			h1 {
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+				border-bottom: 2px solid #bfff00;
+				padding-bottom: 0.5rem;
+			}
+
+			.intro {
+				margin-bottom: 3rem;
+				font-size: 1.1rem;
+				color: #ccc;
+			}
+
+			.posts-grid {
+				display: grid;
+				gap: 2rem;
+			}
+
+			.post-card {
+				background: #111;
+				border: 1px solid #333;
+				padding: 1.5rem;
+				transition: all 0.2s;
+			}
+
+			.post-card:hover {
+				border-color: #bfff00;
+				transform: translateY(-2px);
+			}
+
+			.post-date {
+				display: inline-block;
+				background: #bfff00;
+				color: #000;
+				padding: 0.25rem 0.75rem;
+				font-size: 0.8rem;
+				font-weight: bold;
+				margin-bottom: 1rem;
+				text-transform: uppercase;
+			}
+
+			.post-title {
+				font-size: 1.5rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.post-title a {
+				color: #fff;
+				text-decoration: none;
+			}
+
+			.post-title a:hover {
+				color: #bfff00;
+			}
+
+			.post-excerpt {
+				color: #aaa;
+			}
+
+			.back-link {
+				margin-top: 3rem;
+				text-align: center;
+			}
+
+			.back-link a {
+				color: #fff;
+				text-decoration: none;
+				border-bottom: 1px solid #fff;
+			}
+
+			.back-link a:hover {
+				color: #bfff00;
+				border-color: #bfff00;
+			}
+
+			@media (max-width: 768px) {
+				h1 {
+					font-size: 2rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Blog</h1>
+
+			<div class="intro">
+				<p>
+					Thoughts, notes, and occasional deep dives on web dev, design, and
+					whatever else catches my attention.
+				</p>
+			</div>
+
+			<div class="posts-grid">
+				{
+					posts.map((post) => (
+						<article class="post-card">
+							<span class="post-date">{post.date}</span>
+							<h2 class="post-title">
+								<a href={`/blog/${post.slug}`}>{post.title}</a>
+							</h2>
+							<p class="post-excerpt">{post.excerpt}</p>
+						</article>
+					))
+				}
+			</div>
+
+			<div class="back-link">
+				<a href="/">← Back to Home</a>
+			</div>
+		</div>
+	</body>
+</html>
