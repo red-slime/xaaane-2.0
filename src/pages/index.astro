@@ -564,8 +564,16 @@ import "./index.css";
 				window.innerWidth / 2,
 				window.innerHeight / 2,
 			);
+			
+			// Idle animation tracking
+			let lastMouseMove = Date.now();
+			const idleThreshold = 3000; // 3 seconds of no movement
+			let isIdle = false;
 
 			function onMouseOrTouchMove(event) {
+				lastMouseMove = Date.now();
+				isIdle = false;
+				
 				if (event.type == "touchmove") {
 					mouse.x = event.touches[0].clientX - windowHalf.x;
 					mouse.y = event.touches[0].clientY - windowHalf.y;
@@ -577,6 +585,13 @@ import "./index.css";
 
 			window.addEventListener("mousemove", onMouseOrTouchMove, false);
 			window.addEventListener("touchmove", onMouseOrTouchMove, false);
+			
+			// Check for idle state
+			setInterval(() => {
+				if (Date.now() - lastMouseMove > idleThreshold) {
+					isIdle = true;
+				}
+			}, 500);
 
 			// Reusable function to create 3D text
 			function create3DText(config) {
@@ -644,6 +659,21 @@ import "./index.css";
 
 				let textMesh;
 				var target = new THREE.Vector2();
+				
+				// Idle rotation targets
+				let idleTarget = new THREE.Vector2(
+					(Math.random() - 0.5) * maxRotationY * 0.7,
+					(Math.random() - 0.5) * maxRotationX * 0.7
+				);
+				
+				// Change idle target every 4-7 seconds
+				function updateIdleTarget() {
+					const randomInterval = 4000 + Math.random() * 3000;
+					idleTarget.x = (Math.random() - 0.5) * maxRotationY * 0.7;
+					idleTarget.y = (Math.random() - 0.5) * maxRotationX * 0.7;
+					setTimeout(updateIdleTarget, randomInterval);
+				}
+				updateIdleTarget();
 
 				// Load font and create text
 				const loader = new FontLoader();
@@ -666,26 +696,38 @@ import "./index.css";
 					requestAnimationFrame(animate);
 
 					if (textMesh) {
-						// Apply multipliers and inversions
-						target.x =
-							(1 - mouse.x) * 0.003 * rotationMultiplierX * (invertX ? -1 : 1);
-						target.y =
-							(1 - mouse.y) * 0.003 * rotationMultiplierY * (invertY ? -1 : 1);
+						if (isIdle) {
+							// Use idle rotation - very slow and subtle
+							target.x = idleTarget.x;
+							target.y = idleTarget.y;
+							
+							// Slower interpolation for idle
+							textMesh.rotation.x +=
+								0.01 * (target.y - textMesh.rotation.x);
+							textMesh.rotation.y +=
+								0.01 * (target.x - textMesh.rotation.y);
+						} else {
+							// Mouse-controlled rotation
+							target.x =
+								(1 - mouse.x) * 0.003 * rotationMultiplierX * (invertX ? -1 : 1);
+							target.y =
+								(1 - mouse.y) * 0.003 * rotationMultiplierY * (invertY ? -1 : 1);
 
-						// Apply separate constraints for X and Y
-						target.x = Math.max(
-							-maxRotationY,
-							Math.min(maxRotationY, target.x),
-						);
-						target.y = Math.max(
-							-maxRotationX,
-							Math.min(maxRotationX, target.y),
-						);
+							// Apply separate constraints for X and Y
+							target.x = Math.max(
+								-maxRotationY,
+								Math.min(maxRotationY, target.x),
+							);
+							target.y = Math.max(
+								-maxRotationX,
+								Math.min(maxRotationX, target.y),
+							);
 
-						textMesh.rotation.x +=
-							rotationSpeed * (target.y - textMesh.rotation.x);
-						textMesh.rotation.y +=
-							rotationSpeed * (target.x - textMesh.rotation.y);
+							textMesh.rotation.x +=
+								rotationSpeed * (target.y - textMesh.rotation.x);
+							textMesh.rotation.y +=
+								rotationSpeed * (target.x - textMesh.rotation.y);
+						}
 
 						const isCentered = centerStateRef ? centerStateRef() : false;
 						const shouldHighlight = isHovered || isCentered;
@@ -895,6 +937,86 @@ import "./index.css";
 				hoverColor: 0x4000ff,
 				leftOffset: "100px",
 				centerStateRef: () => centerStates.text3,
+			});
+		</script>
+
+		<script>
+			// Tooltip Viewport Constraint (X-axis only)
+			class TooltipConstraint {
+				constructor(options = {}) {
+					this.tooltipSelector = options.tooltipSelector || '.tooltip';
+					this.edgePadding = options.edgePadding || 10;
+					this.activeTooltips = new Set();
+					
+					this.init();
+				}
+
+				init() {
+					this.setupListeners();
+					window.addEventListener('resize', () => this.updateAllTooltips());
+				}
+
+				setupListeners() {
+					document.querySelectorAll(this.tooltipSelector).forEach((tooltip) => {
+						const parent = tooltip.closest('.client-link-wrapper');
+						if (parent) {
+							parent.addEventListener('mouseenter', () => {
+								this.activeTooltips.add(tooltip);
+								this.constrainTooltip(tooltip);
+							});
+							parent.addEventListener('mouseleave', () => {
+								this.activeTooltips.delete(tooltip);
+								this.resetTooltip(tooltip);
+							});
+						}
+					});
+				}
+
+				constrainTooltip(tooltip) {
+					requestAnimationFrame(() => {
+						const rect = tooltip.getBoundingClientRect();
+						const viewportWidth = window.innerWidth;
+						
+						let adjustment = 0;
+
+						if (rect.right > viewportWidth - this.edgePadding) {
+							adjustment = (viewportWidth - this.edgePadding) - rect.right;
+						}
+						
+						if (rect.left + adjustment < this.edgePadding) {
+							adjustment = this.edgePadding - rect.left;
+						}
+
+						// Disable transition to prevent looping
+						tooltip.style.transition = 'none';
+
+						if (adjustment !== 0) {
+							tooltip.style.transform = `translateX(${adjustment}px)`;
+							tooltip.style.willChange = 'transform';
+						} else {
+							tooltip.style.transform = '';
+							tooltip.style.willChange = '';
+						}
+					});
+				}
+
+				resetTooltip(tooltip) {
+					tooltip.style.transform = '';
+					tooltip.style.willChange = '';
+					tooltip.style.transition = '';
+				}
+
+				updateAllTooltips() {
+					this.activeTooltips.forEach(tooltip => {
+						this.constrainTooltip(tooltip);
+					});
+				}
+			}
+
+			// Initialize
+			window.tooltipConstraint = new TooltipConstraint({
+				tooltipSelector: '.tooltip',
+				edgePadding: 10
 			});
 		</script>
 	</body>

@@ -416,11 +416,12 @@ a {
 	line-height: 1.25;
 	overflow: hidden;
 	color: #bfff00;
+	transition: none !important;
 }
 
-.tooltip.last {
+/* .tooltip.last {
 	left: -200px;
-}
+} */
 
 /* .tooltip {
 	visibility: hidden;
