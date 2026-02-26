@@ -6,6 +6,8 @@ dist/
 node_modules/
 # vs
 .vscode/
+# blog
+src/pages/blog/
 
 # logs
 npm-debug.log*

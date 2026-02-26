@@ -419,9 +419,9 @@ a {
 	transition: none !important;
 }
 
-/* .tooltip.last {
+.tooltip.last {
 	left: -200px;
-} */
+}
 
 /* .tooltip {
 	visibility: hidden;
