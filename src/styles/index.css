@@ -321,7 +321,8 @@ a {
 	color: #fff;
 }
 
-.clients a {
+.clients a,
+.work a {
 	position: relative;
 	display: inline-block;
 	z-index: 2;
@@ -336,13 +337,13 @@ a {
 	}
 }
 
-@media only screen and (max-width: 431px) {
+/* @media only screen and (max-width: 431px) {
 	.clients a {
 		&:hover {
 			animation: none;
 		}
 	}
-}
+} */
 
 .clients p {
 	display: inline-block;
