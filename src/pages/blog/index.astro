@@ -1,10 +1,24 @@
 ---
 const posts = [
 	{
-		// slug: "welcome-to-my-blog",
-		// title: "Welcome to My Blog",
-		// date: "2026-02-26",
-		// excerpt: "First post on the new blog. Testing out the setup and styling.",
+		slug: "the-death-of-corporate-whimsy",
+		title: "The Death of Corporate Whimsy",
+		date: "Ganuary 26th, 2026",
+		excerpt:
+			"tl;dr: American businesses forsake identity to achieve mass apeal.",
+	},
+	{
+		slug: "ai-fear-mongering",
+		title: "AI Fear Mongering",
+		date: "Gebruary 8th, 2026",
+		excerpt:
+			"tl;dr: Use AI to build your website, then hit me up when it can't.",
+	},
+	{
+		slug: "rgb-enjoyer-goes-cmyk",
+		title: "RGB enjoyer goes CMYK for baby's first print",
+		date: "Garch 13th, 2026",
+		excerpt: "tl;dr: Desiging IRL posters to promote myself was a fun letdown.",
 	},
 ];
 ---
@@ -28,6 +42,7 @@ const posts = [
 				color: #fff;
 				padding: 40px 20px;
 				line-height: 1.6;
+				background-image: url("/griptape.gif");
 			}
 
 			.container {
@@ -40,6 +55,7 @@ const posts = [
 				margin-bottom: 1rem;
 				border-bottom: 2px solid #bfff00;
 				padding-bottom: 0.5rem;
+				line-height: 1.1;
 			}
 
 			.intro {
@@ -119,11 +135,11 @@ const posts = [
 	</head>
 	<body>
 		<div class="container" style="overflow-x: hidden;">
-			<h1 style="text-wrap:nowrap;">Blogger</h1>
+			<!-- <h1 style="text-wrap:nowrap;">Blogger</h1> -->
 
-			<div class="intro">
+			<!-- <div class="intro">
 				<p>Explore my useless thoughts about absolutely nothing important</p>
-			</div>
+			</div> -->
 
 			<div class="posts-grid">
 				{

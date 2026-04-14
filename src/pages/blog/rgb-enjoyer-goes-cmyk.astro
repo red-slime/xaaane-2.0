@@ -1,0 +1,320 @@
+---
+const post = {
+	title: "RGB enjoyer goes CMYK for baby's first print",
+	date: "2026-02-26",
+	author: "XAAANE",
+};
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{post.title} - XAAANE</title>
+		<link rel="icon" type="image/png" href="/flavicon.png" />
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: "Times New Roman", Times, serif;
+				background: #000;
+				color: #fff;
+				padding: 40px 20px;
+				line-height: 1.6;
+				background-image: url("/griptape.gif");
+			}
+
+			.container {
+				max-width: 700px;
+				margin: 0 auto;
+			}
+
+			.post-header {
+				margin-bottom: 2.4rem;
+				border-bottom: 2px solid #bfff00;
+				padding-bottom: 1rem;
+			}
+
+			@font-face {
+				font-family: FirstPlace;
+				src: url("/FirstPlace.woff2");
+			}
+
+			h1 {
+				font-size: 3rem;
+				margin-bottom: 0.5rem;
+				font-family: FirstPlace, Times, serif;
+				line-height: 1.1;
+			}
+
+			.post-meta {
+				display: flex;
+				gap: 1rem;
+				color: #aaa;
+				font-size: 0.9rem;
+			}
+
+			.post-content {
+				font-size: 1.1rem;
+				line-height: 1.8;
+			}
+
+			.post-content p {
+				margin-bottom: 1.5rem;
+			}
+
+			.post-content .tldr {
+				color: #bfff00;
+				font-weight: bold;
+			}
+
+			.post-content h2 {
+				font-size: 1.8rem;
+				margin-top: 2rem;
+				margin-bottom: 1rem;
+				color: #bfff00;
+			}
+
+			.post-content h3 {
+				font-size: 1.4rem;
+				margin-top: 1.5rem;
+				margin-bottom: 0.75rem;
+			}
+
+			.post-content ul,
+			.post-content ol {
+				margin-left: 2rem;
+				margin-bottom: 1.5rem;
+			}
+
+			.post-content li {
+				margin-bottom: 0.5rem;
+			}
+
+			.post-content code {
+				background: #111;
+				padding: 0.2rem 0.5rem;
+				border: 1px solid #333;
+				font-family: "Courier New", monospace;
+				color: #bfff00;
+			}
+
+			.post-content pre {
+				background: #111;
+				border: 1px solid #333;
+				padding: 1rem;
+				overflow-x: auto;
+				margin-bottom: 1.5rem;
+			}
+
+			.post-content pre code {
+				background: none;
+				border: none;
+				padding: 0;
+			}
+
+			.post-content blockquote {
+				border-left: 3px solid #bfff00;
+				padding-left: 1.5rem;
+				margin: 1.5rem 0;
+				font-style: italic;
+				color: #aaa;
+			}
+
+			.post-content a {
+				color: #bfff00;
+				text-decoration: none;
+				border-bottom: 1px solid #bfff00;
+			}
+
+			.post-content a:hover {
+				color: #fff;
+				border-color: #fff;
+			}
+
+			.back-link {
+				margin-top: 3rem;
+				padding-top: 2rem;
+				text-align: center;
+			}
+
+			.back-link a {
+				color: #fff;
+				text-decoration: none;
+				border-bottom: 1px solid #fff;
+			}
+
+			.back-link a:hover {
+				color: #bfff00;
+				border-color: #bfff00;
+			}
+
+			.post-content .xoxo {
+				text-align: right;
+			}
+
+			.post-content .image-container {
+				position: relative;
+				display: grid;
+				width: 100%;
+				/* height: 400px; */
+				justify-content: center;
+				gap: 40px;
+				object-fit: contain;
+				margin: 40px 0;
+			}
+
+			.post-content .image-container img {
+				width: 100%;
+			}
+
+			.post-content .image-container .curtain {
+				position: relative;
+			}
+
+			.post-content .image-container .curtain:after {
+				content: "click to see the secret poster too graphic, too obscene for public consumption. But be warned: eyeball teeth pee pee.";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				text-align: center;
+				align-items: center;
+				font-size: 14px;
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px); /* Safari support */
+			}
+
+			.post-content .image-container .curtain:hover:after {
+				content: "" !important;
+				backdrop-filter: blur(0px);
+				-webkit-backdrop-filter: blur(0px); /* Safari support */
+			}
+
+			@media (max-width: 768px) {
+				h1 {
+					font-size: 2rem;
+				}
+
+				.post-content {
+					font-size: 1rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<article>
+				<header class="post-header">
+					<h1>{post.title}</h1>
+					<div class="post-meta"></div>
+				</header>
+
+				<div class="post-content">
+					<p style="font-weight:bold; font-size:24px;">
+						<span class="tldr">tl;dr</span> - Desiging IRL posters to promote myself
+						was a fun letdown.
+					</p>
+					<p>
+						To let the world know I build killer sites, I landed on wheatpasting
+						some posters downtown as a fun way to advertise my businesses. The
+						goal was to stand out with some engaging colors and punk
+						compositions, so I started by gathering inspiration from old
+						Thrasher magazine covers and band posters.
+					</p>
+					<div
+						class="image-container"
+						style="grid-template-columns: 1fr 1fr 1fr;"
+					>
+						<img src="/blog-images/band-poster-1.jpg" />
+						<img src="/blog-images/thrasher-magazine-1.jpg" />
+						<img src="/blog-images/band-poster-2.jpg" />
+					</div>
+					<p>
+						While my style was brewing I landed on language that would
+						compliment the counter-culture direction - none of that try hard
+						"desperate for business" bologna. I wanted to capitalize on the fact
+						that lots of websites look like dirt, with taglines like "your site
+						sucks".
+					</p>
+					<blockquote>
+						Does your site suck? <a href="mailto:web@xaaane.com">Hit me up</a>
+					</blockquote>
+					<p>
+						They came out pretty well and I was happy with the results. Until,
+						like with any art project, I knew I'd revisit it the next day and
+						see everything that's wrong with it. So after a few tweaks and some
+						patience, I finally landed on the final designs. Or so I thought..
+					</p>
+					<p>
+						As a web developer, I work mostly in the RGB (red, green, blue)
+						color model - so that's the model I designed my posters in. A novice
+						mistake any printer would throw their head back and laugh at,
+						because RGB isn't supported by printing machines. Printing machines
+						use CMYK (cyan, magenta, yellow, black).
+					</p>
+					<p>
+						So here I go uploading my work to a printing service only to find
+						the colors muted and misrepresented. Apparently RGB displays are
+						able to display colors that don't exist naturally because the colors
+						are being emitted, not reflected. One of those "gotcha" moments I'm
+						plenty familiar with after building a career on javascript
+						frameworks (its too late to save me, don't make the same mistake).
+					</p>
+					<p>
+						The difference between the RGB and CMYK model is painfully obvious:
+					</p>
+
+					<div class="image-container" style="grid-template-columns: 1fr 1fr;">
+						<img src="/blog-images/poster-good-rgb.png" />
+						<img src="/blog-images/poster-good-cmyk.png" />
+					</div>
+					<div class="image-container" style="grid-template-columns: 1fr 1fr;">
+						<img src="/blog-images/poster-suuucks-rgb.png" />
+						<img src="/blog-images/poster-suuucks-cmyk.png" />
+					</div>
+
+					<p>
+						So back to photoshop (Illustrator enjoyers seeth) to correct all my
+						mistakes and wrestle with the fact that my posters just aren't going
+						to pop like I thought they would. My slime green is now booger green
+						and my hot pinks are luke warm, awesome. But every programmer
+						eventually develops the patience of a saint to cope with learning
+						from their mistakes over and over again, and so I trudged forward.
+					</p>
+
+					<p>
+						Compromises were made and eventually I was, once again, happy with
+						the outcome (albiet relunctantly so). Take a look, take a gander,
+						and know this: never design print materials in the RGB color model.
+						So long, suckers.
+					</p>
+
+					<div
+						class="image-container"
+						style="grid-template-columns: 1fr 1fr 1fr"
+					>
+						<img src="/blog-images/poster-good-rgb.png" />
+						<img src="/blog-images/poster-suuucks-rgb.png" />
+
+						<span class="curtain">
+							<img src="/blog-images/forbidden-poster.png" />
+						</span>
+					</div>
+
+					<h2 class="xoxo">xoxo</h2>
+				</div>
+			</article>
+		</div>
+
+		<div class="back-link">
+			<a href="/blog">← Back to Blog</a>
+		</div>
+	</body>
+</html>
