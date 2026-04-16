@@ -24,8 +24,8 @@ const post = {
 				background: #000;
 				color: #fff;
 				padding: 40px 20px;
-				line-height: 1.6;
 				background-image: url("/griptape.gif");
+				background-attachment: fixed;
 			}
 
 			.container {
@@ -60,11 +60,14 @@ const post = {
 
 			.post-content {
 				font-size: 1.1rem;
-				line-height: 1.8;
 			}
 
 			.post-content p {
 				margin-bottom: 1.5rem;
+			}
+
+			.post-content .tldr-parent {
+				line-height: 1.2;
 			}
 
 			.post-content .tldr {
@@ -189,7 +192,7 @@ const post = {
 				</header>
 
 				<div class="post-content">
-					<p style="font-weight:bold; font-size:24px;">
+					<p class="tldr-parent" style="font-weight:bold; font-size:24px;">
 						<span class="tldr">tl;dr</span> - businesses forsake identity to achieve
 						mass apeal.
 					</p>
@@ -231,8 +234,8 @@ const post = {
 						brand copycats is more difficult than ever, so make it your own. I'd
 						like to see more businesses make stronger attempts at silly,
 						strange, and fun identities. I drive by Gas World often and I love
-						that seeing that stupid little idiot. Look at him, he knows exactly
-						what he's about.
+						seeing that stupid little idiot. Look at him, he knows exactly what
+						he's about.
 					</p>
 
 					<img

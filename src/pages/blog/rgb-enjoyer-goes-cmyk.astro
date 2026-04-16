@@ -24,8 +24,8 @@ const post = {
 				background: #000;
 				color: #fff;
 				padding: 40px 20px;
-				line-height: 1.6;
 				background-image: url("/griptape.gif");
+				background-attachment: fixed;
 			}
 
 			.container {
@@ -60,11 +60,14 @@ const post = {
 
 			.post-content {
 				font-size: 1.1rem;
-				line-height: 1.8;
 			}
 
 			.post-content p {
 				margin-bottom: 1.5rem;
+			}
+
+			.post-content .tldr-parent {
+				line-height: 1.2;
 			}
 
 			.post-content .tldr {
@@ -177,7 +180,7 @@ const post = {
 			}
 
 			.post-content .image-container .curtain:after {
-				content: "click to see the secret poster too graphic, too obscene for public consumption. But be warned: eyeball teeth pee pee.";
+				content: "hover, and witness. a poster too graphic, too obscene for public consumption. But be warned: eyeball teeth pee pee.";
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -217,7 +220,7 @@ const post = {
 				</header>
 
 				<div class="post-content">
-					<p style="font-weight:bold; font-size:24px;">
+					<p class="tldr-parent" style="font-weight:bold; font-size:24px;">
 						<span class="tldr">tl;dr</span> - Desiging IRL posters to promote myself
 						was a fun letdown.
 					</p>
@@ -253,8 +256,8 @@ const post = {
 						patience, I finally landed on the final designs. Or so I thought..
 					</p>
 					<p>
-						As a web developer, I work mostly in the RGB (red, green, blue)
-						color model - so that's the model I designed my posters in. A novice
+						As a web developer I work mostly in the RGB (red, green, blue) color
+						model - so that's the model I designed my posters in. A novice
 						mistake any printer would throw their head back and laugh at,
 						because RGB isn't supported by printing machines. Printing machines
 						use CMYK (cyan, magenta, yellow, black).
@@ -265,7 +268,7 @@ const post = {
 						able to display colors that don't exist naturally because the colors
 						are being emitted, not reflected. One of those "gotcha" moments I'm
 						plenty familiar with after building a career on javascript
-						frameworks (its too late to save me, don't make the same mistake).
+						frameworks (its too late for me, don't make the same mistake).
 					</p>
 					<p>
 						The difference between the RGB and CMYK model is painfully obvious:
@@ -281,7 +284,7 @@ const post = {
 					</div>
 
 					<p>
-						So back to photoshop (Illustrator enjoyers seeth) to correct all my
+						So back to photoshop (illustrator enjoyers seeth) to correct all my
 						mistakes and wrestle with the fact that my posters just aren't going
 						to pop like I thought they would. My slime green is now booger green
 						and my hot pinks are luke warm, awesome. But every programmer
@@ -298,14 +301,11 @@ const post = {
 
 					<div
 						class="image-container"
-						style="grid-template-columns: 1fr 1fr 1fr"
+						style="grid-template-columns: 1fr; gap:20px;"
 					>
 						<img src="/blog-images/poster-good-rgb.png" />
 						<img src="/blog-images/poster-suuucks-rgb.png" />
-
-						<span class="curtain">
-							<img src="/blog-images/forbidden-poster.png" />
-						</span>
+						<img src="/blog-images/forbidden-poster.png" />
 					</div>
 
 					<h2 class="xoxo">xoxo</h2>

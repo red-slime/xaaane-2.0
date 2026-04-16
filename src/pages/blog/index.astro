@@ -5,20 +5,28 @@ const posts = [
 		title: "The Death of Corporate Whimsy",
 		date: "Ganuary 26th, 2026",
 		excerpt:
-			"tl;dr: American businesses forsake identity to achieve mass apeal.",
+			"tl;dr - American businesses forsake identity to achieve mass apeal.",
 	},
 	{
 		slug: "ai-fear-mongering",
 		title: "AI Fear Mongering",
 		date: "Gebruary 8th, 2026",
 		excerpt:
-			"tl;dr: Use AI to build your website, then hit me up when it can't.",
+			"tl;dr - Use AI to build your website, then hit me up when it can't.",
 	},
 	{
 		slug: "rgb-enjoyer-goes-cmyk",
 		title: "RGB enjoyer goes CMYK for baby's first print",
 		date: "Garch 13th, 2026",
-		excerpt: "tl;dr: Desiging IRL posters to promote myself was a fun letdown.",
+		excerpt:
+			"tl;dr - Desiging IRL posters to promote myself was a fun letdown.",
+	},
+	{
+		slug: "linkedin-surveillance",
+		title: "LinkedIn Leverages its Monopoly for Mass Surveillance",
+		date: "Garch 16th, 2026",
+		excerpt:
+			"tl;dr - they're running a massive, global, and illegal spying operation.",
 	},
 ];
 ---
@@ -43,6 +51,7 @@ const posts = [
 				padding: 40px 20px;
 				line-height: 1.6;
 				background-image: url("/griptape.gif");
+				background-attachment: fixed;
 			}
 
 			.container {
@@ -126,6 +135,17 @@ const posts = [
 				border-color: #bfff00;
 			}
 
+			.blog-link-wrapper,
+			.blog-link-wrapper:visited {
+				text-decoration: none;
+				color: white;
+			}
+
+			.blog-link-wrapper:hover h2,
+			.blog-link-wrapper:visited:hover h2 {
+				color: #bfff00;
+			}
+
 			@media (max-width: 768px) {
 				h1 {
 					font-size: 2rem;
@@ -134,7 +154,7 @@ const posts = [
 		</style>
 	</head>
 	<body>
-		<div class="container" style="overflow-x: hidden;">
+		<div class="container" style="overflow-x: hidden; padding-top:20px;">
 			<!-- <h1 style="text-wrap:nowrap;">Blogger</h1> -->
 
 			<!-- <div class="intro">
@@ -143,14 +163,14 @@ const posts = [
 
 			<div class="posts-grid">
 				{
-					posts.map((post) => (
-						<article class="post-card">
-							<span class="post-date">{post.date}</span>
-							<h2 class="post-title">
-								<a href={`/blog/${post.slug}`}>{post.title}</a>
-							</h2>
-							<p class="post-excerpt">{post.excerpt}</p>
-						</article>
+					posts.reverse().map((post) => (
+						<a class="blog-link-wrapper" href={`/blog/${post.slug}`}>
+							<article class="post-card">
+								<span class="post-date">{post.date}</span>
+								<h2 class="post-title">{post.title}</h2>
+								<p class="post-excerpt">{post.excerpt}</p>
+							</article>
+						</a>
 					))
 				}
 			</div>
