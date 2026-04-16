@@ -1,6 +1,7 @@
 ---
 const post = {
 	title: "RGB enjoyer goes CMYK for baby's first print",
+	tldr: "tl;dr - Desiging IRL posters to promote myself was a fun letdown.",
 	date: "2026-02-26",
 	author: "XAAANE",
 };
@@ -11,6 +12,10 @@ const post = {
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{post.title} - XAAANE</title>
+		<meta name="description" content={post.tldr} />
+		<meta property="og:title" content={post.title} />
+		<meta property="og:description" content={post.tldr} />
+		<meta property="og:image" content="/xaaane-og.png" />
 		<link rel="icon" type="image/png" href="/flavicon.png" />
 		<style>
 			* {

@@ -1,6 +1,7 @@
 ---
 const post = {
 	title: "AI Fear Mongering",
+	tldr: "tl;dr - use AI to build your website, then hit me up when it can't.",
 	date: "2026-03-13",
 	author: "XAAANE",
 };
@@ -11,6 +12,10 @@ const post = {
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{post.title} - XAAANE</title>
+		<meta name="description" content={post.tldr} />
+		<meta property="og:title" content={post.title} />
+		<meta property="og:description" content={post.tldr} />
+		<meta property="og:image" content="/xaaane-og.png" />
 		<link rel="icon" type="image/png" href="/flavicon.png" />
 		<style>
 			* {
