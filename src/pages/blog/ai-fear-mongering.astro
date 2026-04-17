@@ -1,7 +1,7 @@
 ---
 import { getPostBySlug } from "./posts";
-import "../../styles/blog.css";
 const post = getPostBySlug("ai-fear-mongering")!;
+import "../../styles/blog.css";
 ---
 
 <html lang="en">
@@ -14,7 +14,6 @@ const post = getPostBySlug("ai-fear-mongering")!;
 		<meta property="og:description" content={post.tldr} />
 		<meta property="og:image" content="/xaaane-og.png" />
 		<link rel="icon" type="image/png" href="/flavicon.png" />
-		<link rel="stylesheet" href="/blog/blog.css" />
 	</head>
 	<body>
 		<div class="container">
