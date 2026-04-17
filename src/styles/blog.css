@@ -1,0 +1,170 @@
+/* Blog Post Shared Styles */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Times New Roman", Times, serif;
+	background: #000;
+	color: #fff;
+	padding: 40px 20px;
+	background-image: url("/griptape.gif");
+	background-attachment: fixed;
+}
+
+.container {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.post-header {
+	margin-bottom: 2.4rem;
+	border-bottom: 2px solid #bfff00;
+	padding-bottom: 1rem;
+}
+
+@font-face {
+	font-family: FirstPlace;
+	src: url("/FirstPlace.woff2");
+}
+
+h1 {
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+	font-family: FirstPlace, Times, serif;
+	line-height: 1.1;
+}
+
+.post-meta {
+	display: flex;
+	gap: 1rem;
+	color: #aaa;
+	font-size: 0.9rem;
+}
+
+.post-content {
+	font-size: 1.1rem;
+}
+
+.post-content p {
+	margin-bottom: 1.5rem;
+}
+
+.post-content .tldr-parent {
+	line-height: 1.2;
+}
+
+.post-content .tldr {
+	color: #bfff00;
+	font-weight: bold;
+}
+
+.post-content h2 {
+	font-size: 1.8rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	color: #bfff00;
+}
+
+.post-content h3 {
+	font-size: 1.4rem;
+	margin-top: 1.5rem;
+	margin-bottom: 0.75rem;
+}
+
+.post-content ul,
+.post-content ol {
+	margin-left: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+.post-content li {
+	margin-bottom: 0.5rem;
+}
+
+.post-content code {
+	background: #111;
+	padding: 0.2rem 0.5rem;
+	border: 1px solid #333;
+	font-family: "Courier New", monospace;
+	color: #bfff00;
+}
+
+.post-content pre {
+	background: #111;
+	border: 1px solid #333;
+	padding: 1rem;
+	overflow-x: auto;
+	margin-bottom: 1.5rem;
+}
+
+.post-content pre code {
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+.post-content blockquote {
+	border-left: 3px solid #bfff00;
+	padding-left: 1.5rem;
+	margin: 1.5rem 0;
+	font-style: italic;
+	color: #aaa;
+}
+
+.post-content a {
+	color: #bfff00;
+	text-decoration: none;
+	border-bottom: 1px solid #bfff00;
+}
+
+.post-content a:hover {
+	color: #fff;
+	border-color: #fff;
+}
+
+.back-link {
+	margin-top: 3rem;
+	padding-top: 2rem;
+	text-align: center;
+}
+
+.back-link a {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid #fff;
+}
+
+.back-link a:hover {
+	color: #bfff00;
+	border-color: #bfff00;
+}
+
+.post-content .xoxo {
+	text-align: right;
+}
+
+.post-content .image-container {
+	display: grid;
+	width: 100%;
+	height: 400px;
+	justify-content: center;
+	gap: 40px;
+}
+
+.post-content .image-container img {
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: 2rem;
+	}
+
+	.post-content {
+		font-size: 1rem;
+	}
+}

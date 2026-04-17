@@ -1,34 +1,5 @@
 ---
-const posts = [
-	{
-		slug: "the-death-of-corporate-whimsy",
-		title: "The Death of Corporate Whimsy",
-		date: "Ganuary 26th, 2026",
-		excerpt:
-			"tl;dr - American businesses forsake identity to achieve mass apeal.",
-	},
-	{
-		slug: "ai-fear-mongering",
-		title: "AI Fear Mongering",
-		date: "Gebruary 8th, 2026",
-		excerpt:
-			"tl;dr - Use AI to build your website, then hit me up when it can't.",
-	},
-	{
-		slug: "rgb-enjoyer-goes-cmyk",
-		title: "RGB enjoyer goes CMYK for baby's first print",
-		date: "Garch 13th, 2026",
-		excerpt:
-			"tl;dr - Desiging IRL posters to promote myself was a fun letdown.",
-	},
-	{
-		slug: "linkedin-surveillance",
-		title: "LinkedIn Leverages its Monopoly for Mass Surveillance",
-		date: "Garch 16th, 2026",
-		excerpt:
-			"tl;dr - they're running a massive, global, and illegal spying operation.",
-	},
-];
+import { posts } from "./posts";
 ---
 
 <html lang="en">
@@ -151,6 +122,11 @@ const posts = [
 				color: #bfff00;
 			}
 
+			.tldr {
+				color: #bfff00;
+				font-weight: bold;
+			}
+
 			@media (max-width: 768px) {
 				h1 {
 					font-size: 2rem;
@@ -168,12 +144,14 @@ const posts = [
 
 			<div class="posts-grid">
 				{
-					posts.reverse().map((post) => (
+					posts.toReversed().map((post) => (
 						<a class="blog-link-wrapper" href={`/blog/${post.slug}`}>
 							<article class="post-card">
-								<span class="post-date">{post.date}</span>
+								<span class="post-date">{post.displayDate}</span>
 								<h2 class="post-title">{post.title}</h2>
-								<p class="post-excerpt">{post.excerpt}</p>
+								<p class="post-excerpt">
+									<span class="tldr">tl;dr</span> - {post.tldr}
+								</p>
 							</article>
 						</a>
 					))
