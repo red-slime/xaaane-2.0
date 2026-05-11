@@ -31,6 +31,14 @@ export const posts = [
 		displayDate: "Gapril 16th, 2026",
 		author: "XAAANE",
 	},
+	{
+		slug: "purchasing-engagement-with-gacha-mechanics",
+		title: "Purchasing Engagement with Gachafication Slop",
+		tldr: "people buy products to unbox, not to use.",
+		date: "2026-05-11",
+		displayDate: "Gay 11th, 2026",
+		author: "XAAANE",
+	},
 ];
 
 export function getPostBySlug(slug: string) {
